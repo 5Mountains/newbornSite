@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+    <!-- <link rel='stylesheet' href='/css/slider.css'> -->
+    <link rel='stylesheet' href='/css/style.css'>
+    <title>
+      <%= title %>
+    </title>
+  </head>
+  
+  <body>
+    <!-- header start -->
+      <header>
+        <div class="container">
+              <div class="header-contacts">
+                  <div class="header-phone">
+                    <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+                  </div>
+                  <div class="header-viber">
+                    <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+                  </div>
+              </div>
+              <div class="header-nav">
+                  <div class="logo">
+                      <a href="/">
+                        <img class="logoImg" src="../img/logo.png" alt="logo">
+                      </a>
+                  </div>
+                  <nav class="navigation">
+                      <button type="button" class="nav-btn">
+                        Меню
+                        <span class="burger-line"></span>
+                      </button>
+                      <ul class="menu">
+                          <li><a href="/">Главная</a></li>
+                          <li>
+                            <a class="menu-item">Галерея</a>
+                            <ul class="menu-sub">
+                              <% for (let i = 0; i < galleryNames.length; i++) { %>
+                              <li><a href="<%= galleryNamesEn[i] %>">
+                                  <%= galleryNames[i] %></a></li>
+                              <% }; %> 
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="menu-item">Услуги</a>
+                            <ul class="menu-sub">
+                                <% for (let i = 0; i < prices.length; i++) { %>
+                                  <li><a href="<%= pricesEn[i] %>">
+                                      <%= prices[i] %></a></li>
+                                  <% }; %>  
+                            </ul>
+                          </li>
+                          <li><a href="o-semke">О съемке</a></li>
+                          <li><a href="otzyvy">Отзывы</a></li>
+                          <li><a href="obo-mne">Обо мне</a></li>
+                          <li><a href="kontakty">Контакты</a></li>
+                      </ul>
+                  </nav>
+              </div>
+        </div>
+      </header>
+    <!-- header end -->
+    
+      <!-- main start -->
+      <main>
+
+        <section class="baby-price">
+          <div class="container">
+
+              <h1 class="baby-price-title">
+                  Стоимость фотосьемки младенцев
+              </h1>
+      
+                <div class="baby-price-items">
+                  <div class="baby-price-item" id="minimum">
+                    <div class="baby-price-img">
+                      <img src="../img/baby1.jpg" alt="Фотография младенца">
+                    </div>
+                    <div class="baby-price-description">
+                      <h3 class="baby-price-subtitle">Пакет "Минимум"</h3>
+                      <h4 class="baby-price-subtitle">200$</h4>
+                      <ul class="baby-price-text">
+                        <li>- 10 фото с детальной ретушью в авторской обработке;</li> 
+                        <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                        <li>- Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                        <li>- Фотографии на Flash носителе;</li>
+                        <li>- Сьемка длительностью 1-1.5 часа;</li>
+                        <li>- Не больше 1го ребенка (фото с родителями не входят);</li>
+                        <li>- Сьемка, у вас на дому.</li>
+                        <li>- Сьемка, с учетом скидки на разрешение публикации, у вас на дому стоимостью 200$* дол.</li>
+                      </ul>
+                      <button type="button">Заказать</button>
+                    </div>
+                  </div>
+                  <div class="baby-price-item" id="standart">
+                      <div class="baby-price-img">
+                          <img src="../img/baby2.jpg" alt="Фотография младенца">
+                      </div>
+                      <div class="baby-price-description">
+                          <h3 class="baby-price-subtitle">Пакет "Стандарт"</h3>
+                          <h4 class="baby-price-subtitle">250$</h4>
+                          <ul class="baby-price-text">
+                            <li>- 20 фото с детальной ретушью в авторской обработке;</li> 
+                            <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                            <li>- Печать фото с детальной ретушью размером 15х21 - 15шт.;</li>
+                            <li>- Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                            <li>- Фотографии на Flash носителе;</li>
+                            <li>- Сьемка длительностью до 2-х часов;</li>
+                            <li>- 1-2 ребенка;</li>
+                            <li>- Сьемка, у вас на дому.</li>
+                            <li>- Сьемка, с учетом скидки на разрешение публикации, у вас на дому стоимостью 250$* дол.</li>
+                          </ul>
+                          <button type="button">Заказать</button>
+                      </div>
+                    </div>
+                    <div class="baby-price-item" id="vip">
+                        <div class="baby-price-img">
+                            <img src="../img/baby3.jpg" alt="Фотография младенца">
+                        </div>
+                        <div class="baby-price-description">
+                          <h3 class="baby-price-subtitle">Пакет "VIP"</h3>
+                          <h4 class="baby-price-subtitle">450$</h4>
+                          <ul class="baby-price-text">
+                            <li>- 30 фото с детальной ретушью в авторской обработке;</li> 
+                            <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                            <li>- Печать фото с детальной ретушью размером 15х21 - 20шт.;</li>
+                            <li>- Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                            <li>- Фотографии на Flash носителе;</li>
+                            <li>- Фотокнига Премиум класа WOODSKIN (с деревянной обложкой) 25х25см на 10 разворотов;</li>
+                            <li>- Скидка на дополнительный экземпляр фотокниги любого размера 10%;</li>
+                            <li>- Сьемка длительностью до 2-3 часа;</li>
+                            <li>- 1-2 ребенка;</li>
+                            <li>- Сьемка, у вас на дому.</li>
+                            <li>- Сьемка, с учетом скидки на разрешение публикации, у вас на дому стоимостью 450$* дол.</li>
+                          </ul>
+                          <button type="button">Заказать</button>
+                      </div>
+                    </div>
+                </div>
+      
+                <div class="baby-price-attention">
+                  <h3 class="baby-price-subtitle">ОБРАТИТЕ ВНИМАНИЕ:</h3>
+                  <p>Бронирование даты по предоплате 20$</p>
+      
+                  <p>Работаю по Киеву и его окрестностях. Выезд по Киеву включен в стоимость съемки<br>
+                    Выезд за пределы Киева оплачивается отдельно (символическая оплата топлива).</p> 
+                    
+                  <p>Отбор фото на ретушь производится фотографом.</p>
+                    
+                  <p>Дополнительная обработки фото с удачных кадров возможна, стоимость ретуши 10$/1 фото. Хранение фото 3 месяца с момента сьемки.</p>
+
+                  <p>Срок отдачи готового результата: 2 месяца с момента 100% оплаты.</p>
+                   
+                  <p>* - цены указаны с учетом скидки в 100 $. Скидка предполагает подписание модельного релиза. Если вы категорически не хотите видеть фото вашего малыша в сети интернет (мой сайт, блог и т.д.) для вас действует обычная цена без скидки (т.е.: 300/350/550 $ дол.). Модельный релиз в данном случае вы не подписываете.</p>
+
+                  <p>Оплата в гривнах по курсу продажи банка ПУМБ, актуальном в день сьемки.</p>
+                </div>
+      
+                <div class="baby-price-add">
+                  <h3 class="baby-price-subtitle">Дополнительно к любому из пакетов Вы можете заказать:</h3>
+                  <p>● <a href="pechatnaya-produkcia/fotoknigi" title="Печать фотокниг">фотокнигу</a> стандарт или премиум класса и различных форматов</p>
+      
+                  <p>● дополнительную печать <a href="pechatnaya-produkcia/fotographii" title="Печать фотографий">фотографий</a></p>
+                    
+                  <p>● <a href="pechatnaya-produkcia/holsti" title="Печать холстов">фотокартину на холсте</a> различных форматов</p>
+                </div>
+              </section>
+          </div>
+        </section>
+
+      </main>
+      <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+
+    <script src="/js/library.js"></script>
+    <!-- <script src="/js/slider.js"></script> -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>

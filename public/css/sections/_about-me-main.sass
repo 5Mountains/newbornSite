@@ -1,0 +1,89 @@
+.about-me-main-title
+  margin-top: 20px
+  a 
+    text-align: center
+    text-transform: uppercase
+    font-size: 24px 
+    display: block
+    padding: 10px 0
+    background: #fff
+    color: #6CC4D8
+    border-bottom: 2px solid #6CC4D8
+    border-top: 2px solid #6CC4D8
+    transition: .7s all
+    &:hover
+      background: #6CC4D8
+      color: #fff
+      border-bottom: 2px solid #fff
+      border-top: 2px solid #fff
+      transition: .7s all
+
+.about-me-main-items
+    display: flex
+    align-items: center
+    padding-top: 70px
+
+.about-me-main-item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-around
+    padding-bottom: 50px
+
+.about-me-main-img
+    width: 40%
+    img
+        width: 90%
+
+.about-me-main-description
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    width: 50%
+    padding: 0 10px
+    line-height: 2
+
+.about-me-main-subtitle
+    text-align: center
+    +bold
+    font-size: 20px
+    text-transform: uppercase
+    padding-top: 20px
+
+.about-me-main-text
+    text-align: center
+    font-size: 16px
+    padding-bottom: 15px
+    // text-indent: 20px
+
+
+@media (max-width: 991px)
+    .about-me-main-img
+        width: 45%
+        img
+            width: 100%
+    .about-me-main-description
+        line-height: 1.7
+        width: 50%
+        padding: 0 0 0 10px
+    .about-me-main-subtitle
+        padding-top: 0
+        font-size: 18px
+    .about-me-main-text
+        font-size: 14px
+        padding-bottom: 5px
+@media (max-width: 768px) 
+    .about-me-main-item
+        flex-flow: column nowrap
+        align-items: center
+        padding-bottom: 0
+    .about-me-main-img
+        width: 70%
+    .about-me-main-description
+        width: 90%
+        padding: 0 10px
+    .about-me-main-subtitle
+        padding: 15px 0 10px 0
+        font-size: 16px
+    .about-me-main-text
+        font-size: 13px
+        padding-bottom: 20px

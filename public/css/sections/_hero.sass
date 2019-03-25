@@ -1,0 +1,70 @@
+
+.hero
+    background: url(../img/hero.jpg) 50% 25% no-repeat
+    background-size: cover
+    background-color: #fff
+    height: calc(100vh - 24vh)
+    width: 100%
+    position: relative
+    &:after
+        width: inherit
+        height: calc(100vh - 24vh)
+        left: 0
+        bottom: 0
+        background-color: rgba(0,0,0,.4)
+        content: ''
+        position: absolute
+
+.hero-content
+  position: absolute
+  z-index: 1
+  display: flex
+  flex-flow: column wrap
+  text-align: center
+  top: 75%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  max-width: inherit
+  color: #fff
+  padding: 0 5px
+  h1 
+    font-size: 40px
+    text-transform: uppercase
+    line-height: 1.5
+    +bold
+    margin-bottom: 5px
+  p 
+    font-size: 20px 
+
+@media (max-width: 1199px)
+  .hero-content
+    h1 
+      font-size: 36px
+
+@media (max-width: 991px)
+  .hero-content
+    h1 
+      font-size: 28px
+    p 
+      font-size: 18px 
+
+@media (max-width: 768px)
+  .hero-content
+    h1 
+      font-size: 22px
+    p 
+      font-size: 15px 
+  
+  .hero-content
+    top: 70%
+  
+@media all and (max-width: 575.98px)
+  .hero-content
+    h1 
+      font-size: 18px
+    p 
+      font-size: 13px 
+    
+  .hero-content
+    top: 65%

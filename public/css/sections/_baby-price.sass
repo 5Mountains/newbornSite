@@ -1,0 +1,144 @@
+.baby-price-title
+    text-align: center
+    margin: 30px auto
+    width: 100%
+    text-transform: uppercase
+    color: #6CC4D8
+    border-bottom: 2px solid #6CC4D8
+    border-top: 2px solid #6CC4D8
+    font-size: 24px
+    +bold
+    padding: 10px 0
+
+.baby-price-items
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.baby-price-item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    border-left: 1px solid #000
+    border-top: 1px solid #000
+    margin-bottom: 20px
+    padding: 20px
+    &:nth-child(2)
+        border-left: none
+        border-right: 1px solid #000
+
+.baby-price-img
+    width: 45%
+    img
+        display: block
+        width: 100%
+
+.baby-price-description
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-around
+    width: 50%
+    padding-top: 20px
+    button
+        width: 50%
+        min-height: 40px 
+        cursor: pointer
+        background-color: #6CC4D8
+        color: #fff
+        +bold
+        letter-spacing: 1.5px
+        font-size: 16px
+        text-transform: uppercase
+        border: 2px solid #fff
+        transition: .5s all
+        margin: 10px 0px
+        &:focus
+            outline: none
+        &:hover
+            border: 2px solid #6CC4D8
+            background: #fff
+            color: #6CC4D8
+    h4
+        padding-top: 5px
+
+.baby-price-subtitle
+    +bold
+    font-size: 20px
+    text-transform: uppercase
+    padding: 10px 0
+
+.baby-price-text
+    width: 100%
+    font-size: 16px
+    line-height: 1.5
+    text-align: justify
+    padding: 10px 0px
+    li
+        padding-bottom: 10px
+
+.baby-price-attention,
+.baby-price-add
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin-bottom: 20px
+    padding: 20px
+    p 
+        padding: 10px 0
+        text-align: left
+        line-height: 1.5
+        text-align: justify
+
+.baby-price-attention
+    border-top: 1px solid #000
+    border-right: 1px solid #000
+
+.baby-price-add
+    border-top: 1px solid #000
+    border-left: 1px solid #000
+    p
+        a
+            transition: .5s all
+            border-bottom: 1px solid #fff
+            &:hover 
+                border-bottom: 1px solid #6CC4D8
+
+.folder-direction-item
+    color: #000
+
+@media (max-width: 991px)
+    .baby-price-title
+        font-size: 26px
+    .baby-price-subtitle
+        font-size: 18px
+    .baby-price-text
+        font-size: 14px
+    .baby-price-attention,
+    .baby-price-add
+        p
+            font-size: 14px
+
+@media (max-width: 768px)
+    .baby-price-title
+        font-size: 20px
+        margin: 20px 10px
+    .baby-price-subtitle
+        font-size: 16px
+    .baby-price-item
+        padding: 10px 20px
+        flex-direction: column
+    .baby-price-subtitle
+        padding: 10px 0
+    .baby-price-description,
+    .baby-price-img
+        width: 95%
+        padding-bottom: 10px
+    .baby-price-text
+        padding: 5px 0
+        font-size: 13px
+    .baby-price-description 
+        button
+            margin: 10px 0 0 0 
+            width: 60%

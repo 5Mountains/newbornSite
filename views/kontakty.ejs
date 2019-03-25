@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='css/style.css' />
+</head>
+
+<body>
+
+    <!-- header start -->
+      <header>
+        <div class="container">
+              <div class="header-contacts">
+                  <div class="header-phone">
+                    <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+                  </div>
+                  <div class="header-viber">
+                    <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+                  </div>
+              </div>
+              <div class="header-nav">
+                  <div class="logo">
+                      <a href="/">
+                        <img class="logoImg" src="../img/logo.png" alt="logo">
+                      </a>
+                  </div>
+                  <nav class="navigation">
+                      <button type="button" class="nav-btn">
+                        Меню
+                        <span class="burger-line"></span>
+                      </button>
+                      <ul class="menu">
+                          <li><a href="/">Главная</a></li>
+                          <li>
+                            <a class="menu-item">Галерея</a>
+                            <ul class="menu-sub">
+                              <% for (let i = 0; i < galleryNames.length; i++) { %>
+                              <li><a href="<%= galleryNamesEn[i] %>">
+                                  <%= galleryNames[i] %></a></li>
+                              <% }; %> 
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="menu-item">Услуги</a>
+                            <ul class="menu-sub">
+                                <% for (let i = 0; i < prices.length; i++) { %>
+                                  <li><a href="<%= pricesEn[i] %>">
+                                      <%= prices[i] %></a></li>
+                                  <% }; %>  
+                            </ul>
+                          </li>
+                          <li><a href="o-semke">О съемке</a></li>
+                          <li><a href="otzyvy">Отзывы</a></li>
+                          <li><a href="obo-mne">Обо мне</a></li>
+                          <li><a href="kontakty">Контакты</a></li>
+                      </ul>
+                  </nav>
+              </div>
+        </div>
+      </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+      <!-- <article id="search">
+        <form id="form" class="form">
+          <h1>Send message</h1>
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" id="email" name="email">
+          <label for="phone">Ваш телефон:</label>
+          <input type="phone" id="phone" name="phone">
+          <label for="content">Содержание:</label>
+          <textarea rows="10" cols="10" id="text" name="text"></textarea>
+          <input type="submit" id="formBtn" value="Отправить">
+        </form>
+      </article> -->
+      <section class="send-main">
+          <div class="container">
+          <div class="send-main-items">
+              <h3 class="send-main-title">
+                  Оставить заявку
+              </h3>
+              <div class="send-main-item">
+                  <form id="form" class="form">
+                    <div class="form-items">
+                      <div class="form-item">
+                          <input type="text" id="name" name="name" placeholder="Ваше имя">
+                          <input type="email" id="email" name="email" placeholder="Ваше e-mail">
+                          <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+                      </div>
+                      <div class="form-item">
+                          <textarea rows="10" cols="10" id="text" placeholder="Ваше сообщение"></textarea>
+                      </div>
+                    </div>
+                    <input type="submit" id="send-main-from-btn" name="submit" value="Отправить">
+                  </form>
+              </div>
+          </div>
+          </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+
+  <script src="/js/library.js"></script>
+  <!-- <script src="/js/slider.js"></script> -->
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

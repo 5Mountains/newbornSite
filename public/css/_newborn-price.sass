@@ -1,0 +1,149 @@
+.direction-folder
+    margin: 15px 0
+    font-size: 14px
+    color: #000
+
+.newborn-price-title
+    text-align: center
+    margin: 30px auto
+    width: 100%
+    text-transform: uppercase
+    color: #6CC4D8
+    border-bottom: 2px solid #6CC4D8
+    border-top: 2px solid #6CC4D8
+    font-size: 24px
+    +bold
+    padding: 10px 0
+
+.newborn-price-items
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.newborn-price-item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    border-left: 1px solid #000
+    border-top: 1px solid #000
+    margin-bottom: 20px
+    padding: 20px
+    &:nth-child(2)
+        border-left: none
+        border-right: 1px solid #000
+
+.newborn-price-img
+    width: 45%
+    img
+        display: block
+        width: 100%
+
+.newborn-price-description
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-around
+    width: 50%
+    padding-top: 20px
+    button
+        width: 50%
+        min-height: 40px 
+        cursor: pointer
+        background-color: #6CC4D8
+        color: #fff
+        +bold
+        letter-spacing: 1.5px
+        font-size: 16px
+        text-transform: uppercase
+        border: 2px solid #fff
+        transition: .5s all
+        margin: 10px 0px
+        &:focus
+            outline: none
+        &:hover
+            border: 2px solid #6CC4D8
+            background: #fff
+            color: #6CC4D8
+    h4
+        padding-top: 5px
+
+.newborn-price-subtitle
+    +bold
+    font-size: 20px
+    text-transform: uppercase
+    padding: 10px 0
+
+.newborn-price-text
+    width: 100%
+    font-size: 16px
+    line-height: 1.5
+    text-align: justify
+    padding: 10px 0px
+    li
+        padding-bottom: 10px
+
+.newborn-price-attention,
+.newborn-price-add
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin-bottom: 20px
+    padding: 20px
+    p 
+        padding: 10px
+        text-align: left
+        line-height: 1.5
+        text-align: justify
+
+.newborn-price-attention
+    border-top: 1px solid #000
+    border-right: 1px solid #000
+
+.newborn-price-add
+    border-top: 1px solid #000
+    border-left: 1px solid #000
+    p
+        a
+            transition: .5s all
+            border-bottom: 1px solid #fff
+            &:hover 
+                border-bottom: 1px solid #6CC4D8
+        &:last-child
+            text-align: center
+            padding: 20px 0 10px 0
+
+@media (max-width: 991px)
+    .newborn-price-title
+        font-size: 26px
+    .newborn-price-subtitle
+        font-size: 18px
+    .newborn-price-text
+        font-size: 14px
+    .newborn-price-attention,
+    .newborn-price-add
+        p
+            font-size: 14px
+
+@media (max-width: 768px)
+    .direction-folder
+        font-size: 10.5px
+    .newborn-price-title
+        font-size: 20px
+        margin: 20px 10px
+    .newborn-price-subtitle
+        font-size: 16px
+    .newborn-price-item
+        padding: 10px 20px
+        flex-direction: column
+    .newborn-price-subtitle
+        padding: 10px 0
+    .newborn-price-description,
+    .newborn-price-img
+        width: 95%
+        padding-bottom: 10px
+    .newborn-price-text
+        padding: 5px 0
+    .newborn-price-description 
+        button
+            margin: 10px 0 0 0 
