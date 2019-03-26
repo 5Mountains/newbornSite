@@ -59,6 +59,8 @@ router.get('/', async function (req, res, next) {
 const pagesList = [
   'kontakty',
   'novorozhdennye-stoimost',
+  'mladentsy-2018',
+  'novorozhdennye-2019',
   'admin',
   'mladentsy-stoimost',
   'o-semke',
