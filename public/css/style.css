@@ -102,8 +102,7 @@ table {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: inherit;
+  width: inherit;
   color: #fff;
   padding: 0 5px; }
   .hero-content h1 {
@@ -175,7 +174,7 @@ table {
   .buttons {
     flex-direction: column;
     align-items: center;
-    bottom: 0%; }
+    bottom: 5%; }
     .buttons a {
       margin-bottom: 10px;
       padding: 10px 15px;
