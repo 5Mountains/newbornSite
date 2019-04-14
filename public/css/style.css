@@ -75,7 +75,7 @@ table {
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
-    padding: 0 30px; } }
+    padding: 0 25px; } }
 
 .header-flex {
   display: flex;
@@ -348,8 +348,7 @@ table {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: inherit;
-  color: #fff;
-  padding: 0 5px; }
+  color: #fff; }
   .hero-content h1 {
     font-size: 40px;
     text-transform: uppercase;
@@ -381,7 +380,8 @@ table {
   .hero-content h1 {
     font-size: 18px; }
   .hero-content p {
-    font-size: 13px; }
+    font-size: 13px;
+    padding: 5px; }
   .hero-content {
     top: 65%; } }
 
