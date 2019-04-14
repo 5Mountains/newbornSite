@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='/css/style.css'>
+  <title>
+    Отзывы о фотографе новорожденных - Алина Пятигор
+  </title>
+  <meta name="description" content="Более 200 счастливых семей уже имеют самую ценную память о первых днях после рождения своего крохи ➔ Читайте отзывы!">
+</head>
+
+<body>
+<!-- header start -->
+  <header>
+    <div class="container">
+          <div class="header-contacts">
+              <div class="header-phone">
+                <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+              </div>
+              <div class="header-viber">
+                <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+              </div>
+          </div>
+          <div class="header-nav">
+              <div class="logo">
+                  <a href="/">
+                    <img class="logoImg" src="../img/logo.png" alt="logo">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <button type="button" class="nav-btn">
+                    Меню
+                    <span class="burger-line"></span>
+                  </button>
+                  <ul class="menu">
+                      <li><a href="/">Главная</a></li>
+                      <li>
+                        <a class="menu-item">Галерея</a>
+                        <ul class="menu-sub">
+                          <% for (let i = 0; i < galleryNames.length; i++) { %>
+                          <li><a href="<%= galleryNamesEn[i] %>">
+                              <%= galleryNames[i] %></a></li>
+                          <% }; %> 
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="menu-item">Услуги</a>
+                        <ul class="menu-sub">
+                            <% for (let i = 0; i < prices.length; i++) { %>
+                              <li><a href="<%= pricesEn[i] %>">
+                                  <%= prices[i] %></a></li>
+                              <% }; %>  
+                        </ul>
+                      </li>
+                      <li><a href="o-semke">О съемке</a></li>
+                      <li><a href="otzyvy">Отзывы</a></li>
+                      <li><a href="obo-mne">Обо мне</a></li>
+                      <li><a href="kontakty">Контакты</a></li>
+                  </ul>
+              </nav>
+          </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <!-- main start -->
+  <main>
+    <!--  -->
+    <!-- feedback section start-->
+    <!--  -->
+    <section class="feedbacks-main">
+    <div class="container">
+        <h3 class="feedbacks-title">
+          Отзывы
+        </h3>
+        <div class="feedbacks-items">
+            <div class="feedbacks-main-item">
+                <div class="feedbacks-main-img">
+                  <img src="../img/feedbackimg/evelina.jpg" alt="Фотография новорожденного">
+                </div>
+                <div class="feedbacks-main-description">
+                  <h3 class="feedbacks-main-subtitle">Ирина / мама Эвелины</h3>
+                  <p class="feedbacks-main-text">Алиночка, огромная благодарность за Ваш профессионализм и индивидуальный подход к деткам! Наша первая фотосессия не оставила никого равнодушным, все говорят: это картинка? А нет, это невероятный талант фотографа, ну и конечно нашей любопытной модельки. Всем, кто еще не решился на фотосессию для новорожденных, очень рекомендую! Поверьте, такие мгновения нужно запечатлеть!!!</p>
+                </div>
+            </div>
+            <div class="feedbacks-main-item">
+                <div class="feedbacks-main-img">
+                  <img src="../img/feedbackimg/polina.jpg" alt="Фотография новорожденного">
+                </div>
+                <div class="feedbacks-main-description">
+                  <h3 class="feedbacks-main-subtitle">Екатерина / мама Полины</h3>
+                  <p class="feedbacks-main-text">Алиночка, спасибо большое за такую память! Багодарна за то, что я ни на минуту не усомнилась в принятом решении сделать фотосессию. Начиная от переписки, согласования "нюансов", процесса сьемки и результата, я очень довольна! Все прошло тихо и спокойно, у вас прекрасная энергетика и малыши это чувствуют. Фотографии тронули до глубины души и это еще одна вещь в мою коллекцию об изумительном периоде жизни моей маленькой доченьки.</p>
+                </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/julya.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Катя / мама Юли</h3>
+                <p class="feedbacks-main-text">АЛИНОЧКА спасибо за прекрасную сьемку нашей зефирки! Это было превосходно!Ты настолько професионально подходиш что 5 часов твоей работы проходят за минуту, находиш контакт с ребенком и чувствуеш деток идеально))) Фото получились шикарные!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+                <div class="feedbacks-main-img">
+                  <img src="../img/feedbackimg/gabriela.jpg" alt="Фотография новорожденного">
+                </div>
+                <div class="feedbacks-main-description">
+                  <h3 class="feedbacks-main-subtitle">Илона / мама Габриеллы</h3>
+                  <p class="feedbacks-main-text">Алиночка, солнышко привет! Фоточки очень красивые! Наша малышка просто прелесть! Мы очень довольны!</p>
+                </div>
+            </div>
+            <div class="feedbacks-main-item">
+                <div class="feedbacks-main-img">
+                  <img src="../img/feedbackimg/sofiyka.jpg" alt="Фотография новорожденного">
+                </div>
+                <div class="feedbacks-main-description">
+                  <h3 class="feedbacks-main-subtitle">Даша / мама Софийки</h3>
+                  <p class="feedbacks-main-text">Спасибо огромное за вашу работу! Фотографии просто чудесные! Работать с вами одно удовольствие. Удачи вам!!! </p>
+                </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/oleg.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Іра / мама Олежика</h3>
+                <p class="feedbacks-main-text">Аліночка! Дякую вам за неймовірні фотографії нашого синочка! Окрім того що ви чудовий, тонкий, чутливий фотограф, ви ще самі творюєте прекрасний дитячий одяг. Також дякую за фотокниги які ви оформили для нас!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/timur.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Юля / мама Тимура</h3>
+                <p class="feedbacks-main-text">Всегда думала, что подобные фото малышей - это результат умелого владения фотошопом. А когда увидела Алину в процессе сьемки - поняла, что это 99% профессионализма, таланта и хорошего знания анатомических и физиологических особенностей новорожденного и всего 1% упомянутого графического редактора)) Всегда очень приятно иметь дело с  профессионалами!</p>
+             </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/zlata.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Ася / мама Златы</h3>
+                <p class="feedbacks-main-text">Фотографии крошки для каждой мамы - это память на всю жизнь. Детки стремительно растут, и вспомнить, какими они приехали домой из роддома - это такое чудо! Алина - чудеснейший специалист совего дела! Я переживала, что наша Злата будет плакать, но Алинушка так нежно ее укладывала, что наша девочка не просыпалась все часы фотосьемки. Каждую неделю я пересматриваю альбом и счаслива, что не упустила это время и нашла волшебницу Алину. Спасибо!!!!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/solomiya.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Юля / мама Соломии</h3>
+                <p class="feedbacks-main-text">Алинка, невероятно довольны вашей работой с первой минуты: с согласования всех деталей сьемки, организация дня фотосессии, вашей пунктуальности и аккуратности. Отношение к малышке во время сьемки самое бережное: начиная с того, что все чисто и стерильно, а также продумано до мелочей все важные моменты для новорожденного (температура в комнате и т.д.). Не смотря на то, что малышке вдень сьемки было всего 9 дней, у меня не было никакого волнения в то время, когда она была "в Ваших руках". Фотографиями довольна абсолютно всеми и получили мы их даже раньше оговоренных сроков. Очень приятно иметь дело с такими професиональными людьми, которые так любят и отдаются своему делу!!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/marko.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Светлана / мама Марко</h3>
+                <p class="feedbacks-main-text">С Алиной связались за месяц до ПДР. Алина уточнила мои пожелания и я полностью доверилась ей в выборе реквизита. Так же Алиночка подстроилась под удобную для нас дату, привезла полкомнаты реквизита и начала творить волшебство :-) в процессе сьемки малышу было максимально комфортно, а мы пользуемся лайфхаками по укачиванию малыша до сих пор. Результат превзошел все мои ожидания))) мы получили невероятно красивые фото. При этом у Алины каждая фотоссесия очень индивидуальная и не похожа на другие.</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/ganna.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Мария / мама Ганнуси</h3>
+                <p class="feedbacks-main-text">Остались под большим приятным впечатлением от работы с Алиной! От простого общения и до получения результата, в памяти остались только позитивные эмоции!! Все очень тщательно продумано/подготовлено, аккуратно, позитивно, фотоссесия прошла спокойно и в удовольствие, хотя с такими крошечными детками это не так просто! Очень, очень и очень красивые фотографии! Довольны на все 200%! Огромное спасибо и успехов!)))</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/mariya.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Оля / мама Марии</h3>
+                <p class="feedbacks-main-text">Спасибо огромное, Алиночка, за Ваш профессионализм, и любовь к работе и деткам! Фотографировались у Вас два раза, и и беременность и доченьку, и обеими фотоссесиями безумно довольны! Спасибо Вам за запечетленные моменты и воспоминания! Удачи Вам, итворчиских и профессиональных успехов! Буду Вас всем рекомендовать!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+  </main> 
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+
+  <script src="/js/library.js"></script>
+  <!-- <script src="/js/slider.js"></script> -->
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+.article-items
+    display: flex
+    align-items: center
+    flex-direction: column
+.article-title
+    text-align: center
+    +bold
+    font-size: 30px
+    padding: 20px 
+    margin: 20px 0
+    border-bottom: 1px solid #000
+.article-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    padding: 20px
+    border-right: 1px solid #000
+    border-left: 1px solid #000
+    border-bottom: 1px solid #000
+.article-img
+    width: 45%
+    img
+        display: block
+        width: 100%
+.article-description
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-around
+    width: 50%
+    a 
+        width: 50%
+        margin: 10px 0px
+        display: block
+        color: #fff
+        cursor: pointer
+        background: #6CC4D8
+        border: 2px solid #fff
+        transition: .5s all
+        letter-spacing: 1.5px
+        font-size: 18px
+        text-align: center
+        padding: 15px 0
+        +bold
+        &:hover
+            border: 2px solid #6CC4D8
+            background: #fff
+            color: #6CC4D8
+.article-subtitle
+    text-align: center
+    +bold
+    font-size: 20px
+    text-transform: uppercase
+    padding: 10px 0
+.article-text
+    width: 100%
+    font-size: 16px
+    line-height: 1.5
+    text-align: justify
+    padding: 10px 0px
+
+@media (max-width: 991px)
+    .article-description
+        a
+            width: 70%
+@media (max-width: 768px)
+    .article-subtitle
+        font-size: 18px
+    .article-text
+        font-size: 14px
+    .article-item
+        flex-direction: column
+        margin-bottom: 10px
+    .article-img
+        width: 100%
+        margin-bottom: 10px
+    .article-description
+        width: 100%
+        a
+            width: 80%
+            font-size: 16px
+            margin-top: 20px
+    .article-title
+            font-size: 20px
+        
+@media all and (max-width: 575.98px)
+    .article-title
+            font-size: 18px
+    .article-items
+        margin: 20px 0 70px 0
+    .article-item
+        margin-bottom: 10px

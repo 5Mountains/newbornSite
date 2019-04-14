@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='/css/style.css'>
+  <title>
+      Из чего состоит цена фотосессии новорожденного?
+  </title>
+</head>
+
+<body>
+  <!-- header start -->
+  
+  <header>
+      <div class="container">
+            <div class="header-contacts">
+                <div class="header-phone">
+                  <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+                </div>
+                <div class="header-viber">
+                  <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="logo">
+                    <a href="/">
+                      <img class="logoImg" src="../img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <nav class="navigation">
+                    <button type="button" class="nav-btn">
+                      Меню
+                      <span class="burger-line"></span>
+                    </button>
+                    <ul class="menu">
+                        <li><a href="/">Главная</a></li>
+                        <li>
+                          <a class="menu-item">Галерея</a>
+                          <ul class="menu-sub">
+                            <% for (let i = 0; i < galleryNames.length; i++) { %>
+                            <li><a href="<%= galleryNamesEn[i] %>">
+                                <%= galleryNames[i] %></a></li>
+                            <% }; %> 
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="menu-item">Услуги</a>
+                          <ul class="menu-sub">
+                              <% for (let i = 0; i < prices.length; i++) { %>
+                                <li><a href="<%= pricesEn[i] %>">
+                                    <%= prices[i] %></a></li>
+                                <% }; %>  
+                          </ul>
+                        </li>
+                        <li><a href="o-semke">О съемке</a></li>
+                        <li><a href="otzyvy">Отзывы</a></li>
+                        <li><a href="obo-mne">Обо мне</a></li>
+                        <li><a href="kontakty">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+      </div>
+  </header>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main>
+
+    <section>
+
+      <article class="newborn-session">
+          <div class="container">
+
+          <h1>Из чего состоит цена фотосессии новорожденного?</h1>
+
+          <p>Какой бы дорогой не казалась <strong>Фотосессия новорожденного</strong>, но цена фотосессии напрямую зависит от профессионализма фотографа, качества реквизита, фототехники и других факторов! Давайте подумаем, готовы ли вы доверить свое сокровище не опытному аматору или вы все же хотите опытного специалиста?! А если смотреть глобально, за первый год будет потрачено не мало средств на ненужные игрушки и прочие вещи, а цена воспоминаний на этом фоне будет просто мизерной! Стоит ли говорить про эксклюзивность данного вида сьеки? Согласитесь, этот период пролетит мгновенного и уже нельзя будет вернуть утраченное время и сделать ту память, которая будет с вами в течении всей жизни!</p>
+
+          <p>Если вы хотите сохранить такой быстротечный, самый нежный период первых дней с рождения вашего ангелочка предоставьте это специалисту, ведь данный вид сьемки требует специальных профильных знаний и колоссальной подготовки. Доверится профессиональному фотографу для новорожденных это впервую очередь безопасность вашего малыша, уверенность в качестве фотографий и удовольствие от самого процесса!</p>
+            
+          <h3>Итак, давайте разберёмся из чего же состоит стоимость фотосессии новорожденных:</h3>
+          
+          <ul class="newborn-session-choice">
+            <li>
+                - Реклама и поиск клиентов, содержание сайта. Самый первый и самый основной пункт с которого все начинается - это реклама! На данный момент очень легко затеряться среди сотен фотографов новорожденных не смотря на опыт и качество фотоснимков, поэтому графа расхода здесь практически неограниченная! Сайт - это визитная карточка любого профессионала, и я как профессионал обращаюсь к специалисту в данной области, что бы вы с удобством и легкостью могли воспользоваться сервисом.
+            </li>
+            <li>
+                - Выезд фотографа. Кто то арендует помещение для фотостудии, а кто то приобретает передвижную. Машина главный атрибут выездного фотографа новорожденных, ведь как то нужно доставить к вам все эти корзинки, фоны, освещение, и многое, многое другое, что находится за кадром, но есть необходимым в арсенале фотографа! Я думаю все понимают что авто необходимо постоянно обслуживать и заправлять, а это не маленькая графа расхода!
+            </li>
+            <li>
+                - Реквизит, закупка и уход. Все мы постоянно следим за новинками в моде, трендами и тенденциями, так и в фотосессии для самых маленьких постоянно все меняется, появляется что то новое, а что то выходит из моды! И конечно же есть ряд реквизита который очень быстро выходит из строя, я фотографирую без памперса, а это чревато последствиями;) Я ни в коем случае не переживаю за испорченный наряд, но это так же является главой расхода! Так же после каждой сьемки весь реквизит стирается в специальных детских средствах, а у стиральной машины проход соответственно увеличивается;) Сюда же я включаю коммунальные расходы на электричество и воду.
+            </li>
+            <li>
+                -	Пост продакшен. Работа ретушёра это целая отдельная отрасль оплачиваемых специалистов, но мы фотографы зачастую обучаемся и берем на себя и этот колоссальный кусок работы, для которого необходим хороший мощный компьютер, для работы специальных программ, покупка этих же программ и самое важное хороший экран, а это на прямую влияет на вид конечного результата!
+            </li>
+            <li>
+                -	Обучение и повышение квалификации. Каждый профессионал знает что все не может стоять на месте и нужно постоянно развиваться. Дорогостоящие мастерклассы и тренинги раз в полгода - год позволяют совершенствоваться и быть для вас все лучше и лучше!
+            </li>
+            <li>
+                - Фототехника. Профессиональная техника, не может стоять дешево и как вся техника имеет свой расход, требует ухода и, со временем, замены.
+            </li>
+            <li>
+                - И самое последнее - гонорар фотографа. Реальные цифры составляют порядка 35% от стоимости фотосессии, в которые входят часы подготовки, выбора и обсуждения реквизита и время сьемки, длительностью от 3 до 5 часов в температуре около 30 градусов.
+            </li>
+          </ul>
+
+          <p>Надеюсь я немного развеяла мифы и вы теперь будете немножко больше осведомлены и достойно оцените мой труд, ведь я люблю свою работу и хочу дарить вам и миру доброту и улыбки через свои фотографии!</p>
+          
+        </div>
+        </article>>
+    </section>
+
+
+  </main>
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+<!-- modal start-->
+  <div class="modal">
+  <div class="modal-wrap">
+        <span class="modal-close-btn">&times;</span>
+        <h3 class="modal-title">Оставить заявку</h3>
+        <div class="modal-item">
+            <form id="form" class="modal-form">
+              <div class="modal-form-items">
+                <div class="modal-form-item">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя">
+                    <input type="email" id="email" name="email" placeholder="Ваше e-mail">
+                    <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+                </div>
+                <div class="modal-form-item">
+                    <textarea rows="10" cols="10" id="text" placeholder="Ваше сообщение"></textarea>
+                </div>
+              </div>
+              <input type="submit" id="send-modal-from-btn" name="submit" value="Отправить">
+            </form>
+      </div>
+  </div>
+  </div>
+<!-- modal end-->
+  <script src="/js/library.js"></script>
+  <!-- <script src="/js/slider.js"></script> -->
+  <script src="/js/index.js"></script>
+</body>
+
+</html> -->

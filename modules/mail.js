@@ -3,11 +3,14 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 let transporter = nodemailer.createTransport({
     host: 'smtp.elasticemail.com',
+    // host: 'smtp.gmail.com',
     port: 2525,
+    // port: 465,
     // secure: true, // use SSL
     auth: {
-        user: 'fivemountains.dev@gmail.com',
-        pass: 'a1ae0748-fbd1-4e08-a1a4-b0c53863b70c'
+        user: 'vladyslavpiatyhor@gmail.com',
+        // pass: 'Veracruz2007'
+        pass: 'e2a3ac30-2623-4d8f-a15a-41a95d3d900e'
     },
     connectionTimeout: 1*60*1000
 })
@@ -28,3 +31,25 @@ module.exports = {
         })
     }
 };
+
+// const nodemailer = require('nodemailer');
+
+// let transporter = nodemailer.createTransport({
+//         service: 'gmail',
+//         auth: {
+//             user: 'vladyslavpiatyhor@gmail.com',
+//             pass: 'VolvoS402008'
+//         }
+//     })
+
+// var mailOptions = {
+//     form: 'vladyslavpiatyhor@gmail.com',
+//     to:'v.piatyhor@gmail.com',
+//     subject: 'SendingEmail with Node.js',
+//     text: `endingEmail with Node.js`
+// }
+
+// transporter.sendMail(mailOptions, (error, info) => {
+//     if (err) console.log('Error: ', error)
+//     else console.log('Email Sent: ', info.response)
+// })

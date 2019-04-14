@@ -31,7 +31,7 @@ function readFile(path) {
     });
   }
 
-  function writeFile(path, text) {
+function writeFile(path, text) {
     // if not mistake and everything is ok - resolve, else - reject
     return new Promise((resolve, reject) => {
       // path - путь, направление для чтения директории

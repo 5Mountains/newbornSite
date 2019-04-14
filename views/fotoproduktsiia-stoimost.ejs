@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+    <link rel='stylesheet' href='/css/style.css'>
+    <title>
+        Стоимость и виды фотопродукции - фотограф новорожденных Алина Пятигор
+    </title>
+    <meta name="description" content="Сколько стоит фотокнига с фотообложкой или замшем, фотохолст или печать фотографий ➔ Узнайте подробнее!">
+  </head>
+  
+  <body>
+    <!-- header start -->
+      <header>
+        <div class="container">
+              <div class="header-contacts">
+                  <div class="header-phone">
+                    <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+                  </div>
+                  <div class="header-viber">
+                    <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+                  </div>
+              </div>
+              <div class="header-nav">
+                  <div class="logo">
+                      <a href="/">
+                        <img class="logoImg" src="../img/logo.png" alt="logo">
+                      </a>
+                  </div>
+                  <nav class="navigation">
+                      <button type="button" class="nav-btn">
+                        Меню
+                        <span class="burger-line"></span>
+                      </button>
+                      <ul class="menu">
+                          <li><a href="/">Главная</a></li>
+                          <li>
+                            <a class="menu-item">Галерея</a>
+                            <ul class="menu-sub">
+                              <% for (let i = 0; i < galleryNames.length; i++) { %>
+                              <li><a href="<%= galleryNamesEn[i] %>">
+                                  <%= galleryNames[i] %></a></li>
+                              <% }; %> 
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="menu-item">Услуги</a>
+                            <ul class="menu-sub">
+                                <% for (let i = 0; i < prices.length; i++) { %>
+                                  <li><a href="<%= pricesEn[i] %>">
+                                      <%= prices[i] %></a></li>
+                                  <% }; %>  
+                            </ul>
+                          </li>
+                          <li><a href="o-semke">О съемке</a></li>
+                          <li><a href="otzyvy">Отзывы</a></li>
+                          <li><a href="obo-mne">Обо мне</a></li>
+                          <li><a href="kontakty">Контакты</a></li>
+                      </ul>
+                  </nav>
+              </div>
+        </div>
+      </header>
+    <!-- header end -->
+    
+    <!-- main start -->
+      <main>
+
+        <section class="photo-production-price">
+          <div class="container">
+            <h1 class="photo-production-price-title-main">
+                Стоимость и виды фотопродукции
+            </h1>
+            <article class="photo-production-price-photo-books">
+              <div class="photo-production-price-items">
+                <div class="photo-production-price-item">
+                  <h3 class="photo-production-price-item-title">
+                    фотокнига WoodSkin
+                  </h3>
+                  <div class="photo-production-price-item-img">
+                    <img src="../img/priceimg/photoproduction/wood-1.jpg" alt="">
+                    <img src="../img/priceimg/photoproduction/wood-2.jpg" alt="">
+                    <img src="../img/priceimg/photoproduction/wood-3.jpg" alt="">
+                    <img src="../img/priceimg/photoproduction/wood-4.jpg" alt="">
+                  </div>
+                  <p class="photo-production-price-item-text">
+                    Обложка Woodskin сделана из многослойного дерева, покрытого специальным ламинатом, что придает ей вид состаренного мореного дуба с объемной текстурой, которая дает ощущение, что вы поглаживаете натуральное старое дерево. Толщина обложки — 6 мм, края не острые, а сглажены так, чтобы придать плавность форме. Фотокнига начинается и завершается форзацами из бархата, чтобы фолиант казался еще более изысканным и неповторимым.
+                  </p>
+                  <h4 class="photo-production-price-item-subtitle">
+                    стоимость WOODSKIN photobook:
+                  </h4>
+                  <ul class="photo-production-price-item-price">
+                    <li>- WOODSKIN photobook размером 30х30см на 10 разворотов (1разворот - 2 страницы) - 150 $;</li>
+                    <li>- WOODSKIN photobook размером 25х25см на 10 разворотов - 130 $;</li>
+                    <li>- WOODSKIN photobook размером 20х20см на 10 разворотов - 110 $;</li>
+                    <li>- +1 разворот - 3 $</li>
+                  </ul>
+                  <button type="button" class="btn-about modal-btn">Оставить заявку</button>
+                </div>
+                <div class="photo-production-price-item" id="photobook">
+                    <h3 class="photo-production-price-item-title">
+                        ФОТОКНИГИ из велюра:
+                      </h3>
+                      <div class="photo-production-price-item-img">
+                        <img src="../img/priceimg/photoproduction/textile-1.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/textile-2.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/textile-3.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/textile-4.jpg" alt="">
+                      </div>
+                      <p class="photo-production-price-item-text">
+                          Невероятный материал, который позволит вам почувствовать нежность и мягкость при просмотре фотокниги. Глубокие цвета велюра в сочетании с красивым декорированием удовлетворят любой эстетический вкус.                      </p>
+                      <h4 class="photo-production-price-item-subtitle">
+                        стоимость ФОТОКНИГИ из велюра:
+                      </h4>
+                      <ul class="photo-production-price-item-price">
+                        <li>Фотокнига из велюра размером 30х30см на 10 разворотов (1разворот - 2 страницы) - 100 $ + бокс для хранения - 60 $ / или / чехол Velure - 25 $;</li>
+                        <li>Фотокнига из велюра размером 25х25см на 10 разворотов - 90 $ + бокс для хранения - 50 $ / или / чехол Velure - 20 $;</li>
+                        <li>Фотокнига из велюра размером 20х20см на 10 разворотов - 70 $ + бокс для хранения - 40 $ / или / чехол Velure - 15 $;</li>
+                        <li>+ 1 разворот - 3 $</li>
+                      </ul>
+                      <button type="button" class="btn-about modal-btn">Оставить заявку</button>
+                </div>
+                <div class="photo-production-price-item">
+                    <h3 class="photo-production-price-item-title">
+                        ФОТОКНИГИ с итальянского кожзама:
+                      </h3>
+                      <div class="photo-production-price-item-img">
+                        <img src="../img/priceimg/photoproduction/leather-1.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/leather-2.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/leather-3.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/leather-4.jpg" alt="">
+                      </div>
+                      <p class="photo-production-price-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus asperiores minima sit ab omnis earum, suscipit enim optio repellat ipsum id vel beatae, vitae recusandae accusantium non ea quam!</p>
+                      <h4 class="photo-production-price-item-subtitle">
+                        стоимость ФОТОКНИГИ с итальянского кожзама:
+                      </h4>
+                      <ul class="photo-production-price-item-price">
+                        <li>Фотокнига размером 30х30см на 10 разворотов (1разворот - 2 страницы), обложка итальянский кож зам с металл шильдом - 90 $</li>
+                        <li>Фотокнига размером 25х25см на 10 разворотов, обложка итальянский кож зам с металл шильдом - 80 $</li>
+                        <li>Фотокнига размером 20х20см на 10 разворотов, обложка итальянский кож зам с металл шильдом - 60 $</li>
+                        <li>+ бокс для хранения - 40 $</li>
+                        <li>+ 1 разворот - 3 $;</li>
+                      </ul>
+                      <button type="button" class="btn-about modal-btn">Оставить заявку</button>
+                </div>
+                <div class="photo-production-price-item">
+                    <h3 class="photo-production-price-item-title">
+                        ФОТОКНИГИ с фотообложкой:
+                      </h3>
+                      <div class="photo-production-price-item-img">
+                        <img src="../img/priceimg/photoproduction/photocover-1.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/photocover-2.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/photocover-3.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/photocover-4.jpg" alt="">
+                      </div>
+                      <p class="photo-production-price-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus asperiores minima sit ab omnis earum, suscipit enim optio repellat ipsum id vel beatae, vitae recusandae accusantium non ea quam!</p>
+                      <h4 class="photo-production-price-item-subtitle">
+                        стоимость ФОТОКНИГИ с фотообложкой:
+                      </h4>
+                      <ul class="photo-production-price-item-price">
+                        <li>Фотокнига размером 30х30см на 10 разворотов (1разворот - 2 страницы), фотообложка - 80 $;</li>
+                        <li>Фотокнига размером 25х25см на 10 разворотов, фотообложка - 70 $;</li>
+                        <li>Фотокнига размером 20х20см на 10 разворотов, фотообложка - 50 $</li>
+                        <li>+ бокс для хранения - 40 $</li>
+                        <li>+ 1 разворот - 3 $;</li>
+                      </ul>
+                      <button type="button" class="btn-about modal-btn">Оставить заявку</button>
+                </div>
+              </div>
+            </article>
+            <article class="photo-production-price-photo-canvas">
+              <div class="photo-production-price-items">
+                <div class="photo-production-price-item" id="canvas">
+                    <h3 class="photo-production-price-item-title">
+                        ХОЛСТЫ
+                      </h3>
+                      <div class="photo-production-price-item-img">
+                        <img src="../img/priceimg/photoproduction/canvas-1.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/canvas-2.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/canvas-3.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/canvas-4.jpg" alt="">
+                      </div>
+                      <p class="photo-production-price-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus asperiores minima sit ab omnis earum, suscipit enim optio repellat ipsum id vel beatae, vitae recusandae accusantium non ea quam!</p>
+                      <h4 class="photo-production-price-item-subtitle">
+                        стоимость фото ХОЛСТЫ
+                      </h4>
+                      <ul class="photo-production-price-item-price">
+                        <li>25х25 - 450 грн;</li>
+                        <li>35х35 - 500 грн;</li>
+                        <li>55х55 - 650 грн;</li>
+                        <li>85х85 - 1400 грн;</li>
+                        <li>40х25 - 500 грн;</li>
+                        <li>55х35 - 575 грн;</li>
+                        <li>85х55 - 750 грн;</li>
+                        <li>115х75 - 1800 грн;</li>
+                        <li>55х25 - 550 грн;</li>
+                        <li>75х35 - 700 грн;</li>
+                        <li>115х55 - 1100 грн.</li>
+                      </ul>
+                      <button type="button" class="btn-about modal-btn">Оставить заявку</button>
+                </div>
+              </div>
+            </article>
+            <article class="photo-production-price-photos">
+              <div class="photo-production-price-items">
+                <div class="photo-production-price-item" id="photo">
+                    <h3 class="photo-production-price-item-title">
+                        ФОТОПЕЧАТь
+                      </h3>
+                      <div class="photo-production-price-item-img">
+                        <img src="../img/priceimg/photoproduction/photo-1.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/photo-2.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/photo-3.jpg" alt="">
+                        <img src="../img/priceimg/photoproduction/photo-4.jpg" alt="">
+                      </div>
+                      <p class="photo-production-price-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus asperiores minima sit ab omnis earum, suscipit enim optio repellat ipsum id vel beatae, vitae recusandae accusantium non ea quam!</p>
+                      <h4 class="photo-production-price-item-subtitle">
+                        стоимость фотопечати
+                      </h4>
+                      <ul class="photo-production-price-item-price">
+                        <li>- 10х15 - 0,50 $</li>
+                        <li>- 15х21 - 1 $</li>
+                      </ul>
+                      <button type="button" class="btn-about modal-btn">Оставить заявку</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+  <!-- modal start-->
+  <div class="modal">
+      <div class="modal-wrap">
+            <span class="modal-close-btn">&times;</span>
+            <h3 class="modal-title">Оставить заявку</h3>
+            <div class="modal-item">
+                <form id="form" class="modal-form">
+                  <div class="modal-form-items">
+                    <div class="modal-form-item">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя">
+                        <input type="email" id="email" name="email" placeholder="Ваше e-mail">
+                        <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+                    </div>
+                    <div class="modal-form-item">
+                        <textarea rows="10" cols="10" id="text" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                  </div>
+                  <input type="submit" id="send-modal-from-btn" name="submit" value="Отправить">
+                </form>
+          </div>
+      </div>
+  </div>
+  <!-- modal end-->
+    <script src="/js/library.js"></script>
+    <!-- <script src="/js/slider.js"></script> -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>

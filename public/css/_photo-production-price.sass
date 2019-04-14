@@ -1,0 +1,127 @@
+.photo-production-price-title-main
+  text-align: center
+  margin: 30px auto
+  width: 100%
+  text-transform: uppercase
+  color: #6CC4D8
+  border-bottom: 2px solid #6CC4D8
+  border-top: 2px solid #6CC4D8
+  font-size: 24px
+  +bold
+  padding: 10px 0
+
+.photo-production-price-items
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.photo-production-price-item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    border-left: 1px solid #000
+    border-top: 1px solid #000
+    margin-bottom: 20px
+    padding: 10px
+    &:nth-child(2),
+    &:nth-child(4)
+        border-left: none
+        border-right: 1px solid #000
+
+.photo-production-price-photos
+    .photo-production-price-item
+        border-left: none
+        border-right: 1px solid #000
+
+.photo-production-price-item-img
+    width: 100%
+    text-align: center
+    padding: 10px
+    img
+        display: block
+        float: left
+        width: 25%
+
+.photo-production-price-item-title
+    font-size: 24px
+
+.photo-production-price-item-subtitle
+    font-size: 20px
+
+.photo-production-price-item-title,
+.photo-production-price-item-subtitle
+    +bold
+    text-align: center
+    text-transform: uppercase
+    padding: 10px 0
+
+.photo-production-price-item-text
+    line-height: 1.5
+    text-align: justify
+    padding: 10px 0
+    text-indent: 20px
+    width: 90%
+
+.photo-production-price-item-price
+    width: 90%
+    font-size: 16px
+    line-height: 1.5
+    text-align: justify
+    padding: 10px 0px
+    li
+        padding-bottom: 10px
+
+.btn-about
+    cursor: pointer
+    width: 40%
+    min-height: 40px 
+    background: #6CC4D8
+    color: #fff
+    +bold
+    letter-spacing: 1.5px
+    font-size: 16px
+    text-transform: uppercase
+    border: 2px solid #fff
+    transition: .5s all
+    margin: 10px 0px
+    &:focus
+        outline: none
+    &:hover
+        border: 2px solid #6CC4D8
+        background: #fff
+        color: #6CC4D8
+        
+
+
+@media (max-width: 991px)
+    .photo-production-price-title-main
+        font-size: 26px
+    .photo-production-price-item-title
+        font-size: 20px
+    .photo-production-price-item-subtitle
+        font-size: 18px
+    .photo-production-price-item-text,
+    .photo-production-price-item-price
+        font-size: 14px
+    .photo-production-price-item-img
+        img
+            width: 50%
+
+@media (max-width: 768px)
+    .photo-production-price-title-main
+        font-size: 20px
+    .photo-production-price-item-title
+        font-size: 18px
+    .photo-production-price-item-subtitle
+        font-size: 16px
+    .photo-production-price-item-img
+        img
+            width: 50%
+    .btn-about
+        width: 70%
+
+@media all and (max-width: 575.98px)
+    .photo-production-price-item-img
+        img
+            width: 100%

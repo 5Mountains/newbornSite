@@ -1,5 +1,4 @@
 .newborn-price-main-title
-  margin-top: 20px
   a 
     text-align: center
     text-transform: uppercase
@@ -9,7 +8,7 @@
     background: #fff
     color: #6CC4D8
     border-bottom: 2px solid #6CC4D8
-    border-top: 2px solid #6CC4D8
+    border-top: 2px solid #fff
     transition: .7s all
     &:hover
       background: #6CC4D8
@@ -19,7 +18,7 @@
       transition: .7s all
 
 .newborn-price-main-items
-    margin-top: 50px
+    margin: 50px 0 70px 0
     display: flex
     align-items: flex-start
     justify-content: space-between
@@ -96,6 +95,9 @@
     transition: all 1s ease
 
 @media (max-width: 991px)
+    .newborn-price-main-title
+        a
+            font-size: 20px
     .newborn-price-main-subtitle
         font-size: 18px
     .newborn-price-main-text
@@ -105,9 +107,14 @@
     .newborn-price-main-items
         flex-direction: column
         align-items: center
+        margin: 20px 0 70px 0
     .newborn-price-main-item
         width: 100%
-        padding-bottom: 80px
+        border-top: 1px solid #6CC4D8
+        padding: 40px 0 100px 0
+        &:first-child
+            border-top: none
+            padding-top: 0
     .newborn-price-main-over
         opacity: 1
         a   
@@ -117,6 +124,7 @@
             transform: translate(-50%)
             margin: 15px auto
             margin-top: 0
+            margin-bottom: 40px
 
 
     .newborn-price-main-item:hover .newborn-price-main-description
@@ -131,31 +139,19 @@
         opacity: 1
         transition: all 1s ease
 
-// @media (orientation: landscape) 
-//     .newborn-price-main-items
-//         flex-direction: column
-//         align-items: center
-//     .newborn-price-main-item
-//         width: 100%
-//         padding-bottom: 60px
-//     .newborn-price-main-over
-//         opacity: 1
-//         a   
-//             position: absolute
-//             bottom: 0
-//             left: 50%
-//             transform: translate(-50%)
-//             margin: 10px auto
-//             margin-top: 0
-
-
-//     .newborn-price-main-item:hover .newborn-price-main-description
-//         opacity: 1
-//         transition: none
-
-//     .newborn-price-main-item:hover .newborn-price-main-img
-//         opacity: 1
-//         transition: none
-
-//     .newborn-price-main-item:hover .newborn-price-main-over
-//         opacity: 1
+@media all and (max-width: 575.98px)
+    .newborn-price-main-items
+        margin: 20px 0 70px 0
+    .newborn-price-main-item
+        border-top: 1px solid #6CC4D8
+        padding: 40px 0 100px 0
+        &:first-child
+            border-top: none
+            padding-top: 0
+    .newborn-price-main-title
+        a
+            font-size: 18px
+    .newborn-price-main-over
+        a 
+            width: 65%
+            margin-bottom: 40px

@@ -1,0 +1,92 @@
+.newborn-gallery-tittle
+  +bold
+  text-align: center
+  text-transform: uppercase
+  font-size: 24px 
+  display: block
+  padding: 10px 0
+  background: #fff
+  color: #6CC4D8
+  border-bottom: 2px solid #6CC4D8
+  border-top: 2px solid #6CC4D8
+
+.newborn-gallery-items
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-flow: row wrap
+  margin: 50px 0
+  padding-top: 50px
+  border-top: 2px solid #6CC4D8
+
+.newborn-gallery-item
+  width: 30%
+  display: flex
+  flex-direction: column
+  padding: 10px
+
+.newborn-gallery-item-photo
+  transition: all .5s ease-in-out
+  &:hover
+    transform: scale(1.03)
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, .7)
+
+.newborn-gallery-item-photo:hover + .newborn-gallery-item-text
+  opacity: 1
+
+.newborn-gallery-item-img
+  display: block
+  width: 100%
+
+.newborn-gallery-item-text
+  padding-top: 10px
+  opacity: 0
+  text-align: center
+  color: #00B7FF
+  +bold
+  transition: 0.7s all
+
+.more
+  width: 100%
+  text-align: center
+  text-transform: uppercase
+  font-size: 24px 
+  display: block
+  padding: 10px 0
+  background: #fff
+  color: #6CC4D8
+  border-bottom: 2px solid #6CC4D8
+  border-top: 2px solid #6CC4D8
+  transition: .7s all
+  &:hover
+    background: #6CC4D8
+    color: #fff
+    border-bottom: 2px solid #fff
+    border-top: 2px solid #fff
+    transition: .7s all
+
+@media (max-width: 991px)
+  .newborn-gallery-item
+    width: 47%
+
+@media (max-width: 768px)
+  .newborn-gallery-items
+    border-top: none
+    padding-top: 0
+    padding-bottom: 50px
+  .newborn-gallery-item
+    width: 100%
+  .newborn-gallery-item-text
+    opacity: 1
+    font-size: 14px
+  .newborn-gallery-tittle,
+  .more
+    font-size: 20px
+
+@media all and (max-width: 575.98px)
+  .newborn-gallery-tittle,
+  .more
+    font-size: 18px
+
+

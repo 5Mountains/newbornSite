@@ -4,15 +4,45 @@
 
 @import 'grid'
 
+@import 'header'
+
 @import 'sections/hero' 
+
+@import 'sections/newborn-gallery-main'
+
+@import 'sections/article'
 
 @import 'sections/newborn-price-main'
 
-@import 'sections/baby-price'
+@import 'sections/article-main'
+
+@import 'sections/o-semke'
 
 @import 'newborn-price'
 
+@import 'photo-production-price'
+
+@import 'sections/baby-price'
+
+@import 'sections/send-main'
+
+@import 'universal-gallery'
+
+@import 'prew-gallery'
+
+@import 'sections/feedbacks-main'
+
+@import 'sections/about-me-main'
+
+@import 'about-me'
+
+@import 'feedback'
+
 @import 'footer'
+
+@import 'gallery'
+
+@import 'modal'
 
 /*! START main style */
 
@@ -35,281 +65,3 @@ li
   list-style: none
 
 /*! END main style */
-
-
-/*! START container style */
-
-
-/*! END container style */
-
-
-
-// // write mixine like -> media-breakpoint-between ...
-// // Extra small devices (portrait phones, less than 576px)
-// @media all and (max-width: 575.98px)
-//   .container 
-//     max-width: 540px
-
-//   .header-contacts
-//     flex-direction: column
-//     align-items: center
-//     justify-content: center
-
-//   .header-social
-//     flex-direction: row
-//     align-items: center
-//     padding-right: 0px
-
-//   .header-facebook
-//     padding-right: 25px
-
-//   .header-nav
-//     flex-direction: column
-//     justify-content: space-between
-//     width: 100%
-
-//   .logo
-//     width: 150px
-//     height: 150px
-//     top: 0px
-
-//   .navigation
-//     margin-bottom: 10px
-//     width: 100%
-//     ul 
-//       display: none
-//       flex-flow: column nowrap
-//     label
-//       display: block
-  
-//   .burger-line,
-//   .burger-line:before,
-//   .burger-line:after
-//     display: block
-
-//   .menu
-//     position: absolute
-//     transform: translateY(23%)
-//     width: 100%
-//     top: 0
-//     z-index: 4
-//     background-color: #fff
-//     li
-//      border-bottom: 1px solid rgba(0,0,0,.2)
-//      text-align: center
-//      a 
-//       margin: 5px auto
-//       text-align: center
-//      &:after
-//       display: none
-//       &:defore
-//        display: none
-
-//   .menu-sub
-//     position: relative
-//     li
-//       padding: 0
-//       a
-//         display: block
-//     li:last-child
-//       border-bottom: none
-
-//   input.toggleMenu:checked + label.toggleMenu + span.burger-line:before
-//     transform: rotate(45deg)
-    
-//   input.toggleMenu:checked + label.toggleMenu + span.burger-line:after
-//     transform: rotate(-45deg)
-
-//   input.toggleMenu:checked + label.toggleMenu + span.burger-line
-//     height: 0
-
-//   input.toggleMenu:checked ~ ul
-//     display: block
-
-// // // Small devices (landscape phones, 576px and up)
-// @media screen and (min-width: 576px) and (max-width: 767.98px)
-//   .container 
-//     max-width: 540px
-
-//   .moved
-//     top: 0 !important
-
-//   .menu
-//     font-size: 13px
-//     line-height: 20px 
-//     top: -30px
-//     li
-//       a
-//         margin: 5px 6px
-//         &:hover
-//           transform: scale(1.1)
-
-//   .menu-sub
-//     li
-//       padding: 5px
-//       a
-//         margin: 5px
-
-//   .logo
-//     width: 150px
-//     height: 150px
-//     top: -15px
-
-//   .navigation
-//     margin-bottom: -30px
-
-// // // Medium devices (tablets, 768px and up)
-// @media screen and (min-width: 768px) and (max-width: 991.98px)
-//   .container 
-//     max-width: 720px
-
-//   .logo
-//     width: 175px
-//     height: 175px
-
-//   .menu
-//     li
-//       a
-//         margin: 5px 10px
-//         &:hover
-//           transform: scale(1.1)
-
-//   .menu-sub
-//     li
-//       padding: 5px
-//       a
-//         margin: 5px
-
-// // // Large devices (desktops, 992px and up)
-// @media screen and (min-width: 992px) and (max-width: 1199.98px)
-//   .container 
-//     max-width: 960px
-
-// // // Extra large devices (large desktops, 1200px and up)
-// @media screen and (min-width: 1200px)
-//   .container 
-//     max-width: 1140px
-
-// // Start hero section
-
-
-
-// .article
-//   padding-top: 20px
-
-// .article-title
-//   text-align: center
-//   font-size: 24px
-//   font-style: bold
-//   padding: 20px
-
-// // .article-subtitle
-// //   text-align: center
-// //   font-size: 24px
-// //   font-style: bold
-// //   padding: 20px
-
-// .article-img
-//   width: 50%
-//   float: left
-//   padding: 10px 25px 5px 10px
-
-// .article-text
-//   padding: 10px
-//   text-align: justify
-
-// .admin
-//   display: flex
-//   align-items: center
-//   justify-content: center
-//   margin-top: 50px
-//   input
-//     padding: 10px
-
-// .form
-//   display: flex
-//   flex-direction: column
-//   align-items: center
-//   justify-content: center
-//   padding-top: 50px
-
-
-// .gallery
-//   display: flex
-//   justify-content: space-around
-//   flex-wrap: wrap
-//   width: 100%
-//   padding: 80px 15px
-//   display: flex
-//   justify-content: space-between
-//   align-items: center
-//   width: 100%
-
-// .gallery-photo
-//   display: inline-block
-//   max-width: 400px
-//   width: 100%
-//   padding: 25px 10px
-
-// .gallery-img
-//   display: inline-block
-//   background-size: cover
-//   background-repeat: no-repeat
-//   background-position: center
-//   width: 100%
-//   height: 280px
-
-// .gallery-text 
-//   text-align: center
-
-// .gallery-item
-//   display: inline-block
-//   height: 500px
-//   padding: 10px
-
-// .hello
-//   font-size: 100px
-//   text-align: center
-//   margin: 0 auto
-//   padding-top: 150px
-
-// .low-price-text 
-//   white-space: pre
-
-// .adminPanel
-//   height: 5em
-//   width: 100%
-//   background: yellow
-
-// .createGallery 
-//   background-color: green
-//   width: 60%
-//   height: 500px
-//   left: 20%
-//   position: absolute
-//   display: none
-
-// .createAlbum 
-//   background-color: red
-//   width: 60%
-//   height: 500px
-//   left: 20%
-//   position: absolute
-//   top: 3em
-
-// .createService 
-//   background-color: blue
-//   width: 60%
-//   height: 500px
-//   left: 20%
-//   position: absolute
-//   top: 3em
-
-// .newborn-prices
-//   display: flex
-//   flex-wrap: nowrap
-
-// .low-price
-//   width: 33%
-
-

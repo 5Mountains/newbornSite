@@ -1,0 +1,85 @@
+.feedbacks-main-title
+    +bold
+    width: 100%
+    text-align: center
+    text-transform: uppercase
+    font-size: 24px 
+    display: block
+    padding: 10px 0
+    background: #fff
+    color: #6CC4D8
+    border-bottom: 2px solid #6CC4D8
+    border-top: 2px solid #6CC4D8
+
+.feedbacks-main-items
+    margin: 50px 0 100px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-flow: row wrap
+    padding-top: 50px
+    border-top: 2px solid #6CC4D8
+
+.feedbacks-main-item
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 49%
+    padding-bottom: 50px
+    &:first-child
+        justify-content: center
+    &:last-child
+        justify-content: center
+
+.feedbacks-main-img
+    width: 150px
+    height: 150px
+    border-radius: 50%
+    margin: 0 auto
+    overflow: hidden
+    img
+        width: auto
+        height: 100%
+        margin-left: -25%
+
+.feedbacks-main-description
+    width: 65%
+
+.feedbacks-main-subtitle
+    text-align: center
+    +bold
+    font-size: 16px
+    text-transform: uppercase
+    padding-top: 10px
+
+.feedbacks-main-text
+    height: 100%
+    text-align: justify
+    font-size: 14px
+    line-height: 1.4
+    padding: 10px 0px
+    
+
+
+@media (max-width: 991px)
+    .feedbacks-main-items
+        flex-flow: column wrap
+        border-top: none
+        padding-top: 0
+    .feedbacks-main-item
+        width: 100%
+    .newborn-price-main-subtitle
+        font-size: 18px
+    .newborn-price-main-text
+        font-size: 14px
+    .feedbacks-main-description
+        width: 55%
+
+
+@media all and (max-width: 575.98px)
+    .feedbacks-main-item
+        flex-direction: column
+    .feedbacks-main-img
+        margin-bottom: 10px
+    .feedbacks-main-description
+        width: 90%

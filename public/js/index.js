@@ -57,14 +57,16 @@ navBtn.addEventListener('click', ()=>{
         modal = document.querySelector('.modal'),
         closeModal = document.querySelector('.modal-close-btn');
 
-    Array.from(btnModal).forEach(function(){
-        this.addEventListener('click',()=>{
+    btnModal.forEach(function(btn){
+            btn.addEventListener('click', ()=>{
+            console.log('btn on')
             modal.style.display = 'flex';
         })
     })
 
     closeModal.addEventListener('click', ()=>{
         console.log('close btn')
+        const modal = document.querySelector('.modal');
         modal.style.display = 'none';
     })
 

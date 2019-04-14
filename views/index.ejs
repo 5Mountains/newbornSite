@@ -6,13 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
-  <link rel='stylesheet' href='/css/style.css'>
+  <link rel="stylesheet" href="/css/style.css">
   <title>
-    Фотограф новорожденных Алина Пятигор
+    Фотограф новорожденных с выездом на дом в Киев и пригороде - Алина Пятигор
   </title>
+  <meta name="description" content="Профессиональная фотосессии для новорожденных с выездом на дом в Киеве и пригороде. ✔ От 5 до 14 дней с рождения ♥ Больше 4-х лет опыта ♥ Больше 200 сьемок → Заходите!">
 </head>
 
 <body>
+<!-- header start -->
+  <header>
+    <div class="container">
+          <div class="header-contacts">
+              <div class="header-phone">
+                <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+              </div>
+              <div class="header-viber">
+                <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+              </div>
+          </div>
+          <div class="header-nav">
+              <div class="logo">
+                  <a>
+                    <img class="logoImg" src="../img/logo.png" alt="Логотип">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <button type="button" class="nav-btn">
+                    Меню
+                    <span class="burger-line"></span>
+                  </button>
+                  <ul class="menu">
+                      <li><a>Главная</a></li>
+                      <li>
+                        <a class="menu-item">Галерея</a>
+                        <ul class="menu-sub">
+                          <% for (let i = 0; i < galleryNames.length; i++) { %>
+                          <li><a href="<%= galleryNamesEn[i] %>">
+                              <%= galleryNames[i] %></a></li>
+                          <% }; %> 
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="menu-item">Услуги</a>
+                        <ul class="menu-sub">
+                            <% for (let i = 0; i < prices.length; i++) { %>
+                              <li><a href="<%= pricesEn[i] %>">
+                                  <%= prices[i] %></a></li>
+                              <% }; %>  
+                        </ul>
+                      </li>
+                      <li><a href="o-semke">О съемке</a></li>
+                      <li><a href="otzyvy">Отзывы</a></li>
+                      <li><a href="obo-mne">Обо мне</a></li>
+                      <li><a href="kontakty">Контакты</a></li>
+                  </ul>
+              </nav>
+          </div>
+    </div>
+  </header>
+  <!-- header end -->
   <!-- main start -->
   <main>
     <!--  -->
@@ -22,20 +75,404 @@
         <div class="container">
             <div class="hero-content">
                 <h1>
-                    Фотограф новорожденных <br> Алина Пятигор
+                    Профессиольная фотоссесия Вашего ребенка в первые дни с рождения
                 </h1>
                 <p>
-                  Сайт находиться на реконструкции
+                    Профессиольная фотоссесия новорожденных деток от 5 до 14 дней с рождения с выездом на дом в Киев и пригород
                 </p>
-                <p>
-                  Извините за временные неудобства.
-                </p>
-            </div>
-            <div class="buttons">
-              <a href="novorozhdennye-2019">Стоимость сьемки новорожденных</a>
-              <a href="mladentsy-2018">Стоимость сьемки младенцев</a>
             </div>
         </div>
+    </section>
+    <!--  -->
+    <!-- newborn gallery section start-->
+    <!--  -->
+    <section class="newborn-gallery">
+
+        <div class="container">
+          
+            <div class="newborn-gallery-items">
+              <div class="newborn-gallery-item">
+              <h3 class="newborn-gallery-tittle">
+                  Галерея новорожденных
+              </h3>
+            </div>
+              <% prewPhotos.novorozhdennye.forEach(function(prewPhoto) { %>
+
+                <div class="newborn-gallery-item">
+                    <a href="<%= prewPhoto.href %>" class="newborn-gallery-item-photo">
+                      <img src="<%= prewPhoto.url %>" alt="Фотография новорожденного - <%= prewPhoto.name %>, позирующего фотографу новорожденных Алине Пятигор" class="newborn-gallery-item-img">
+                    </a>
+                    <p class="newborn-gallery-item-text"><%= prewPhoto.name %></p>
+                </div>  
+
+              <% }); %>
+              <div class="newborn-gallery-item">
+                <a href="novorozhdennye"class="more">Посмотреть все >>></a>
+              </div>
+          </div>
+          
+        </div>
+  
+    </section>
+    <!--  -->
+    <!-- articles section start-->
+    <!--  --> 
+    <section class="articles-main">
+      <div class="container">
+        
+        <h3 class="article-main-title">
+              <a href="o-semke">О сьемке</a>
+        </h3>
+
+        <div class="article-main-items">
+  
+            <article class="article-main-item">
+              <div class="article-main-img">
+                  <img src="../img/newbornphoto.jpg" alt="Новогодняя фотография новорожденного в костюме олененка в корзинке">
+              </div>
+              <div class="article-main-description">
+                  <h3 class="article-main-subtitle">Фотосессия новорожденного.<br> Как все организовать?</h3>
+                  <p class="article-main-text">Фотосессия новорожденного - все эти милые позы комочком, уютные корзинки, сладко спящие мосички, только представьте как нежно будут выглядеть спустя годы!...</p>
+                  <p class="article-main-text">Если вы хотите сохранить такой быстротечный, самый нежный период первых дней с рождения вашего ангелочка предоставьте это специалисту, ведь данный вид сьемки требует специальных профильных знаний и колоссальной подготовки. Доверится профессиональному фотографу для новорожденных это впервую очередь безопасность вашего малыша, уверенность в качестве фотографий и удовольствие от самого процесса.</p>
+                  <p class="article-main-text">Итак, как же правильно все организовать и заказать фотосессию новорожденного ?!</p>
+                  <a href="/article-newborn-session">Узнать подробнее</a>
+              </div>
+            </article>
+    
+            <article class="article-main-item">
+              <div class="article-main-img">
+                  <img src="../img/newborn-price.jpg" alt="Фотография ножек новорожденного в оуркжени ладоней родителей">
+              </div>
+              <div class="article-main-description">
+                  <h3 class="article-main-subtitle">Цена фотосессии новорожденного.<br> Из чего она состоит?</h3>
+                  <p class="article-main-text">Какой бы дорогой не казалась сьемка новорожденного, но цена фотосессии напрямую зависит от профессионализма фотографа, качества реквизита, фототехники и других факторов!  А если смотреть глобально, за первый год будет потрачено не мало средств на ненужные игрушки и прочие вещи, а цена воспоминаний на этом фоне будет просто мизерной! Стоит ли говорить про эксклюзивность данного вида сьеки?</p>     
+                  <p class="article-main-text">Итак, давайте разберёмся из чего же состоит стоимость фотосессии новорожденных...</p>
+                  <a href="/article-session-price">Узнать подробнее</a>
+                </div>
+            </article>
+        </div>
+
+      </div>
+    </section>
+    <!--  -->
+    <!-- newborn price section start-->
+    <!--  --> 
+    <section class="newborn-price-main">
+        <div class="container">
+          <h3 class="newborn-price-main-title">
+            <a href="novorozhdennye-stoimost">пакеты услуг сьемки новорожденных</a>
+          </h3>
+  
+          <div class="newborn-price-main-items">
+            <div class="newborn-price-main-item">
+              <div class="newborn-price-main-img">
+                <img src="../img/priceimg/newborn/first.jpg" alt="Фотография новорожденного который сладко спит набочку с игрушкой">
+              </div>
+              <div class="newborn-price-main-description">
+                <h3 class="newborn-price-main-subtitle">Пакет "Минимум"</h3>
+                <ul class="newborn-price-main-text">
+                  <li><span>-</span> 10 фото с детальной ретушью в авторской обработке;</li> 
+                  <li><span>-</span> Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                  <li><span>-</span> Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                  <li><span>-</span> Фотографии на Flash носителе;</li>
+                  <li><span>-</span> Сьемка длительностью до 3-х часов;</li>
+                  <li><span>-</span> Не больше 1го ребенка (фото с родителями не входят);</li>
+                  <li><span>-</span> Сьемка, у вас на дому.</li>
+                </ul>
+              </div>
+              <div class="newborn-price-main-over">
+                <a href="novorozhdennye-stoimost#minimum" class="one"><span class="two">Узнать подробнее</span></a>
+              </div>
+            </div>
+            <div class="newborn-price-main-item">
+                <div class="newborn-price-main-img">
+                    <img src="../img/priceimg/newborn/second.jpg" alt="Фотография новорожденного который спит в объятиях счастливой мамы">
+                </div>
+                <div class="newborn-price-main-description">
+                    <h3 class="newborn-price-main-subtitle">Пакет "Стандарт"</h3>
+                    <ul class="newborn-price-main-text">
+                      <li><span>-</span> 20 фото с детальной ретушью в авторской обработке;</li> 
+                      <li><span>-</span> Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                      <li><span>-</span> Печать фото с детальной ретушью размером 15х21 - 20шт.;</li>
+                      <li><span>-</span> Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                      <li><span>-</span> Фотографии на Flash носителе;</li>
+                      <li><span>-</span> Сьемка длительностью до 4-х часов;</li>
+                      <li><span>-</span> 1-2 ребенка, фото с родителями по желанию;</li>
+                      <li><span>-</span> Сьемка, у вас на дому.</li>
+                    </ul>
+                </div>
+                <div class="newborn-price-main-over">
+                  <a href="novorozhdennye-stoimost#standart" class="one"><span class="two">Узнать подробнее</span></a>
+                </div>
+            </div>
+            <div class="newborn-price-main-item">
+                  <div class="newborn-price-main-img">
+                      <img src="../img/priceimg/newborn/third.jpg" alt="Фотография новорожденного с милыми и довольными братьями">
+                  </div>
+                  <div class="newborn-price-main-description">
+                    <h3 class="newborn-price-main-subtitle">Пакет "VIP"</h3>
+                     <ul class="newborn-price-main-text">
+                      <li><span>-</span> 30 фото с детальной ретушью в авторской обработке;</li> 
+                      <li><span>-</span> Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                      <li><span>-</span> Печать фото с детальной ретушью размером 15х21 - 30шт.;</li>
+                      <li><span>-</span> Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                      <li><span>-</span> Фотографии на Flash носителе;</li>
+                      <li><span>-</span> Фотокнига Премиум класа WOODSKIN (с деревянной обложкой) 30х30см на 10 разворотов;</li>
+                      <li><span>-</span> Скидка на дополнительный экземпляр фотокниги любого размера 10%;</li>
+                      <li><span>-</span> Макро сьемка (ножки, ручки и др.);</li>
+                      <li><span>-</span> Сьемка длительностью до 5-ти часов;</li>
+                      <li><span>-</span> 1-3 ребенка, фото с родителями по желанию;</li>
+                      <li><span>-</span> Сьемка, у вас на дому.</li>
+                    </ul>
+                </div>
+                <div class="newborn-price-main-over">
+                  <a href="novorozhdennye-stoimost#vip" class="one"><span class="two">Узнать подробнее</span></a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!--  -->
+    <!-- baby gallery section start-->
+    <!--  -->
+    <section class="newborn-gallery">
+
+      <div class="container">
+
+          <div class="newborn-gallery-items">
+
+                <div class="newborn-gallery-item">
+                  <h3 class="newborn-gallery-tittle">
+                      Галерея младенцев
+                  </h3>
+                </div>
+
+              <% prewPhotos.mladentsy.forEach(function(prewPhoto) { %>
+
+                <div class="newborn-gallery-item">
+                    <a href="<%= prewPhoto.href %>" class="newborn-gallery-item-photo">
+                      <img src="<%= prewPhoto.url %>" alt="Фотография младенца - <%= prewPhoto.name %>, позирующего фотографу Алине Пятигор" class="newborn-gallery-item-img">
+                    </a>
+                    <p class="newborn-gallery-item-text"><%= prewPhoto.name %></p>
+                </div>  
+
+              <% }); %>
+
+              <div class="newborn-gallery-item">
+                  <a href="mladentsy" class="more">Посмотреть все >>></a>
+              </div>
+
+          </div>
+
+      </div>
+
+    </section>
+    <!--  -->
+    <!-- baby gallery section start-->
+    <!--  -->
+    <section class="baby-price-main">
+      <div class="container">
+        <h3 class="newborn-price-main-title">
+          <a href="mladentsy-stoimost">пакеты услуг сьемки младенцев</a>
+        </h3>
+
+        <div class="newborn-price-main-items">
+          <div class="newborn-price-main-item">
+            <div class="newborn-price-main-img">
+              <img src="../img/priceimg/baby/baby1.jpg" alt="Фотография младенца лежа на животике на Флокати">
+            </div>
+            <div class="newborn-price-main-description">
+              <h3 class="newborn-price-main-subtitle">Пакет "Минимум"</h3>
+              <ul class="newborn-price-main-text">
+                  <li>- 10 фото с детальной ретушью в авторской обработке;</li> 
+                  <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                  <li>- Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                  <li>- Фотографии на Flash носителе;</li>
+                  <li>- Сьемка длительностью 1-1.5 часа;</li>
+                  <li>- Не больше 1го ребенка (фото с родителями не входят);</li>
+                  <li>- Сьемка, у вас на дому.</li>
+                </ul>
+            </div>
+            <div class="newborn-price-main-over">
+              <a href="mladentsy-stoimost#minimum" class="one"><span class="two">Узнать подробнее</span></a>
+            </div>
+          </div>
+          <div class="newborn-price-main-item">
+              <div class="newborn-price-main-img">
+                  <img src="../img/priceimg/baby/baby2.jpg" alt="Фотография младенца лежа животике на санках">
+              </div>
+              <div class="newborn-price-main-description">
+                  <h3 class="newborn-price-main-subtitle">Пакет "Стандарт"</h3>
+                  <ul class="newborn-price-main-text">
+                      <li>- 20 фото с детальной ретушью в авторской обработке;</li> 
+                      <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                      <li>- Печать фото с детальной ретушью размером 15х21 - 15шт.;</li>
+                      <li>- Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                      <li>- Фотографии на Flash носителе;</li>
+                      <li>- Сьемка длительностью до 2-х часов;</li>
+                      <li>- 1-2 ребенка;</li>
+                      <li>- Сьемка, у вас на дому.</li>
+                    </ul>
+              </div>
+              <div class="newborn-price-main-over">
+                <a href="mladentsy-stoimost#standart" class="one"><span class="two">Узнать подробнее</span></a>
+              </div>
+          </div>
+          <div class="newborn-price-main-item">
+                <div class="newborn-price-main-img">
+                    <img src="../img/priceimg/baby/baby3.jpg" alt="Фотография младенца лежа на спине на Флокати">
+                </div>
+                <div class="newborn-price-main-description">
+                  <h3 class="newborn-price-main-subtitle">Пакет "VIP"</h3>
+                   <ul class="newborn-price-main-text">
+                      <li>- 30 фото с детальной ретушью в авторской обработке;</li> 
+                      <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                      <li>- Печать фото с детальной ретушью размером 15х21 - 20шт.;</li>
+                      <li>- Дополнительно все удачные фото с базовой цветокоррекцией; </li>
+                      <li>- Фотографии на Flash носителе;</li>
+                      <li>- Фотокнига Премиум класа WOODSKIN (с деревянной обложкой) 25х25см на 10 разворотов;</li>
+                      <li>- Скидка на дополнительный экземпляр фотокниги любого размера 10%;</li>
+                      <li>- Сьемка длительностью до 2-3 часа;</li>
+                      <li>- 1-2 ребенка;</li>
+                      <li>- Сьемка, у вас на дому.</li>
+                    </ul>
+                  </ul>
+              </div>
+              <div class="newborn-price-main-over">
+                <a href="mladentsy-stoimost#vip" class="one"><span class="two">Узнать подробнее</span></a>
+              </div>
+          </div>
+        </div>
+        <!-- <div class="newborn-price-main-btn">
+          <button type="button">Узнать подробнее</button>
+        </div> -->
+      </div>
+    </section>
+    <!--  -->
+    <!-- feedback section start-->
+    <!--  -->
+    <section class="feedbacks-main">
+    <div class="container">
+        
+        <div class="feedbacks-main-items">
+            <div class="feedbacks-main-item">
+                <h3 class="feedbacks-main-title">
+                    Отзывы
+                </h3>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/polina.jpg" alt="Фотография крочи Полины, фотограф новорожденных Алина Пятигор">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Екатерина / мама Полины</h3>
+                <p class="feedbacks-main-text">Алиночка, спасибо большое за такую память! Багодарна за то, что я ни на минуту не усомнилась в принятом решении сделать фотосессию. Начиная от переписки, согласования "нюансов", процесса сьемки и результата, я очень довольна! Все прошло тихо и спокойно, у вас прекрасная энергетика и малыши это чувствуют. Фотографии тронули до глубины души и это еще одна вещь в мою коллекцию об изумительном периоде жизни моей маленькой доченьки.</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/marko.jpg" alt="Фотография крохи Марко, фотограф новорожденных Алина Пятигор">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Светлана / мама Марко</h3>
+                <p class="feedbacks-main-text">С Алиной связались за месяц до ПДР. Алина уточнила мои пожелания и я полностью доверилась ей в выборе реквизита. Так же Алиночка подстроилась под удобную для нас дату, привезла полкомнаты реквизита и начала творить волшебство :-) в процессе сьемки малышу было максимально комфортно, а мы пользуемся лайфхаками по укачиванию малыша до сих пор. Результат превзошел все мои ожидания))) мы получили невероятно красивые фото. При этом у Алины каждая фотоссесия очень индивидуальная и не похожа на другие.</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/solomiya.jpg" alt="Фотография крочи Соломии, фотограф новорожденных Алина Пятигор">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Юля / мама Соломии</h3>
+                <p class="feedbacks-main-text">Алинка, невероятно довольны вашей работой с первой минуты: с согласования всех деталей сьемки, организация дня фотосессии, вашей пунктуальности и аккуратности. Отношение к малышке во время сьемки самое бережное: начиная с того, что все чисто и стерильно, а также продумано до мелочей все важные моменты для новорожденного (температура в комнате и т.д.). Не смотря на то, что малышке вдень сьемки было всего 9 дней, у меня не было никакого волнения в то время, когда она была "в Ваших руках". Фотографиями довольна абсолютно всеми и получили мы их даже раньше оговоренных сроков. Очень приятно иметь дело с такими професиональными людьми, которые так любят и отдаются своему делу!!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/zlata.jpg" alt="Фотография крочи Златы, фотограф новорожденных Алина Пятигор">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Ася / мама Златы</h3>
+                <p class="feedbacks-main-text">Фотографии крошки для каждой мамы - это память на всю жизнь. Детки стремительно растут, и вспомнить, какими они приехали домой из роддома - это такое чудо! Алина - чудеснейший специалист совего дела! Я переживала, что наша Злата будет плакать, но Алинушка так нежно ее укладывала, что наша девочка не просыпалась все часы фотосьемки. Каждую неделю я пересматриваю альбом и счаслива, что не упустила это время и нашла волшебницу Алину. Спасибо!!!!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/ganna.jpg" alt="Фотография крочи Ганнуси, фотограф новорожденных Алина Пятигор">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Мария / мама Ганнуси</h3>
+                <p class="feedbacks-main-text">Остались под большим приятным впечатлением от работы с Алиной! От простого общения и до получения результата, в памяти остались только позитивные эмоции!! Все очень тщательно продумано/подготовлено, аккуратно, позитивно, фотоссесия прошла спокойно и в удовольствие, хотя с такими крошечными детками это не так просто! Очень, очень и очень красивые фотографии! Довольны на все 200%! Огромное спасибо и успехов!)))</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+              <div class="feedbacks-main-img">
+                <img src="../img/feedbackimg/evelina.jpg" alt="Фотография крочи Эвелины, фотограф новорожденных Алина Пятигор">
+              </div>
+              <div class="feedbacks-main-description">
+                <h3 class="feedbacks-main-subtitle">Ирина / мама Эвелины</h3>
+                <p class="feedbacks-main-text">Алиночка, огромная благодарность за Ваш профессионализм и индивидуальный подход к деткам! Наша первая фотосессия не оставила никого равнодушным, все говорят: это картинка? А нет, это невероятный талант фотографа, ну и конечно нашей любопытной модельки. Всем, кто еще не решился на фотосессию для новорожденных, очень рекомендую! Поверьте, такие мгновения нужно запечатлеть!!!</p>
+              </div>
+            </div>
+            <div class="feedbacks-main-item">
+                <a href="otzyvy" class="more">Посмотреть все >>></a>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--  -->
+    <!-- about-main section start-->
+    <!--  -->
+    <section class="about-me-main">
+    <div class="container">
+        <h3 class="about-me-main-title">
+            <a href="obo-mne">Обо мне</a>
+        </h3>
+        <div class="about-me-main-items">
+            <div class="about-me-main-item">
+              <div class="about-me-main-img">
+                <img src="../img/me.jpg" alt="Портретное фото фотографа новорожденных Алины Пятигор">
+              </div>
+              <div class="about-me-main-description">
+                <h3 class="about-me-main-subtitle">фотограф новорожденных<br>Алина Пятигор</h3>
+                <p class="about-me-main-text">Спасибо что посетили мою страничку! Давайте знакомится, меня зовут Алина, я фотограф новорожденных деток, живу и работаю в Киеве.</p>
+                <p class="about-me-main-text">Люблю фотографировать еще с детства, но нашла себя в этой профессии после просмотра зарубежных newborn фотографий, я безумно влюбилась в эти снимки и поняла, что вот оно, то чем я хочу и буду заниматься! Прошла серьезное профильное обучение, для того что бы максимально эффективно и безопасно сохранить для вас первые волшебные дни жизни вашего крохи.</p>
+                <p class="about-me-main-text">Создание нежных фотографий спящих ангелочков для меня не просто работа, а занятие, которое приносит неимоверное удовольствие, ведь я безумно люблю всех деток которых фотографирую!</p>
+                <p class="about-me-main-text">Загляните в раздел с отзывами, а так же присоединяйтесь ко мне соц. сетях, и мимимишное настроение вам будет обеспечено!:) Иконки со ссылками чуть ниже. Буду рада всех видеть!</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--  -->
+    <!-- send-main section start-->
+    <!--  -->
+    <section class="send-main">
+      <div class="container">
+      <div class="send-main-items">
+          <h3 class="send-main-title">
+              Оставить заявку
+          </h3>
+          <h3 class="send-main-title">
+              Оставить заявку
+          </h3>
+          <div class="send-main-item">
+              <form id="form" class="form">
+                <div class="form-items">
+                  <div class="form-item">
+                      <input type="text" id="name" name="name" placeholder="Ваше имя">
+                      <input type="email" id="email" name="email" placeholder="Ваше e-mail">
+                      <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+                  </div>
+                  <div class="form-item">
+                      <textarea rows="10" cols="10" id="text" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </div>
+                <input type="submit" id="send-main-from-btn" name="submit" value="Отправить">
+              </form>
+          </div>
+      </div>
+      </div>
     </section>
   </main> 
   <!-- main end -->
@@ -49,10 +486,10 @@
           <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
         </div>
         <div class="footer-social-item">
-          <a title="instagram" href="https://www.instagram.com/alina.piatyhor/"><i class="fab fa-instagram fa-lg"></i>instagram</a>
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
         </div>
         <div class="footer-social-item">
-          <a title="facebook" href="https://www.facebook.com/a.ivaschenko1"><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
         </div>
         <div class="footer-social-item">
           <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
@@ -62,6 +499,9 @@
 
   </footer>
   <!-- footer end -->
+  <script src="/js/library.js"></script>
+  <script src="/js/contacts.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

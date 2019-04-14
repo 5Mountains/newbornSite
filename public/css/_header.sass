@@ -1,0 +1,269 @@
+// Header start
+
+.header-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.header-contacts
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  min-height: 50px
+
+.header-social
+  display: flex
+  color: #6CC4D8
+
+.header-viber
+  background: #665CA7
+  padding: 10px 25px
+  border-radius: 10px
+  a 
+    color: #fff
+
+.fab,
+.fas,
+.far
+  margin-right: 10px
+  vertical-align: center
+  align-items: center
+
+.header-nav
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+      
+.logo 
+  margin-top: -50px
+  a 
+    display: block
+    img
+      width: 200px
+      height: 200px
+
+//Mobile menu start
+.navigation
+  position: relative
+  width: 100vw
+
+.nav-btn
+  display: none
+  width: inherit
+  min-height: 40px 
+  cursor: pointer
+  position: relative
+  background-color: #6CC4D8
+  color: #fff
+  border: none
+  padding: 0
+  +bold
+  letter-spacing: 1.5px
+  font-size: 16px
+  text-transform: uppercase
+  border-bottom: 2px solid #fff
+  &:focus
+    outline: none
+
+.burger-line,
+.burger-line:before,
+.burger-line:after
+  display: none
+  position: absolute
+  top: 50%
+  width: 25px
+  margin-right: 20px
+  right: 0
+  height: 2px
+  margin-top: -1px
+  background-color: #fff
+  transition: .1s
+
+.burger-line
+  &:before,
+  &:after
+    content: ""
+    margin-right: 0px
+    transition: .5s
+
+.burger-line 
+  &:before
+    transform: translateY(-6.5px)
+  &:after
+    transform: translateY(6.5px)
+// Mobile menu end
+
+Fixed navigation
+.fixed
+  position: fixed
+  z-index: 3
+  background-color: #fff
+  width: 100%
+  top: 0
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .7)
+  label
+    border: none
+
+.menu
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-flow: row wrap
+  width: 100vw
+  z-index: 2
+  background-color: #6CC4D8
+  li
+    magin: 0 20px
+    min-height: 40px
+    display: block
+    text-align: center
+    border-right: 1px solid #fff
+    text-align: center
+    &:first-child
+      border-left: 1px solid #fff
+  a
+    display: block
+    padding: 7px 0 5px 0
+    color: #fff
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    height: inherit
+    text-decoration: none
+    margin: 5px 20px
+    transition: all .3s ease-in-out
+    position: relative
+    &:hover
+      transform: scale(1.2)
+    &:before
+      content: ''
+      bottom: 0
+      position: absolute
+      width: 100%
+      height: 2px
+      background: #fff
+      transition: all .3s ease-in-out
+      transform: scaleX(0)
+    &:hover
+      &:before
+        transform: scaleX(1)
+
+// Moved menu  
+.moved
+  top: 0
+  width: 100%
+
+.menu-item
+  cursor: pointer
+  
+.menu-sub
+  display: none
+  opacity: 0
+  height: 0
+  z-index: 1
+  position: absolute
+  margin-top: 2px
+  transition: .5s all
+  background-color: #6CC4D8
+  li
+    padding: 0 15px 
+    text-align: left
+    border: none
+    border-bottom: 1px solid #fff
+    &:first-child
+      border-left: none
+      border-top: 1px solid #fff
+    &:last-child
+      border-bottom: none
+    a
+      display: inline-block
+      text-transform: none 
+      margin: 5px 0
+      padding: 7px 0 5px 0
+      &:hover
+        transform: scale(1.1)
+
+.active
+    height: 0
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(-45deg)
+
+.open + .menu-sub
+  display: block
+  opacity: 1
+  height: auto
+  border: none
+
+
+// End header
+
+@media (max-width: 991px)
+  .menu 
+    a 
+      margin: 5px 10px
+  .logo 
+      a 
+        img
+          width: 175px
+          height: 175px
+
+@media (max-width: 768px)
+  
+  .header-contacts
+    flex-direction: column
+
+  .header-phone
+    margin: 15px 0
+
+  .logo
+    margin-top: 0
+    a 
+      img
+        width: 150px
+        height: 150px
+
+  .nav-btn
+    display: block
+  .burger-line,
+  .burger-line:before,
+  .burger-line:after
+    display: block
+  
+  .menu
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    text-align: center
+    li 
+      border-bottom: 2px solid #fff
+    a
+      display: inline-block
+      &:hover
+        &:before
+          transform: scaleX(1)
+
+  .open + .menu-sub
+    display: block
+    opacity: 1
+    height: auto
+    position: relative
+
+  .menu-sub
+    li
+      background-color: #fff
+      text-align: center
+      border-bottom: 1px solid #6CC4D8 
+    &:first-child
+      border-top: 2px solid #6CC4D8 
+    &:last-child
+      border-bottom: 1px solid #fff
+    a 
+      color: #6CC4D8 
+
+  .show
+    display: block

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+    <link rel='stylesheet' href='/css/style.css'>
+    <title>
+      Все о съемке
+    </title>
+  </head>
+  
+  <body>
+    <!-- header start -->
+    <header>
+        <div class="container">
+              <div class="header-contacts">
+                  <div class="header-phone">
+                    <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+                  </div>
+                  <div class="header-viber">
+                    <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+                  </div>
+              </div>
+              <div class="header-nav">
+                  <div class="logo">
+                      <a href="/">
+                        <img class="logoImg" src="../img/logo.png" alt="logo">
+                      </a>
+                  </div>
+                  <nav class="navigation">
+                      <button type="button" class="nav-btn">
+                        Меню
+                        <span class="burger-line"></span>
+                      </button>
+                      <ul class="menu">
+                          <li><a href="/">Главная</a></li>
+                          <li>
+                            <a class="menu-item">Галерея</a>
+                            <ul class="menu-sub">
+                              <% for (let i = 0; i < galleryNames.length; i++) { %>
+                              <li><a href="<%= galleryNamesEn[i] %>">
+                                  <%= galleryNames[i] %></a></li>
+                              <% }; %> 
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="menu-item">Услуги</a>
+                            <ul class="menu-sub">
+                                <% for (let i = 0; i < prices.length; i++) { %>
+                                  <li><a href="<%= pricesEn[i] %>">
+                                      <%= prices[i] %></a></li>
+                                  <% }; %>  
+                            </ul>
+                          </li>
+                          <li><a href="o-semke">О съемке</a></li>
+                          <li><a href="otzyvy">Отзывы</a></li>
+                          <li><a href="obo-mne">Обо мне</a></li>
+                          <li><a href="kontakty">Контакты</a></li>
+                      </ul>
+                  </nav>
+              </div>
+        </div>
+    </header>
+    <!-- header end -->
+    
+      <!-- main start -->
+      <main>
+
+        <section class="article-items">
+
+          <div class="container">
+
+              <h1 class="article-title">Все что нужно знать о сьемке</h1>
+
+              <article class="article-item">
+                <div class="article-img">
+                    <img src="../img/newbornphoto.jpg" alt="Фотография новорожденного">
+                </div>
+                <div class="article-description">
+                    <h3 class="article-subtitle">Фотосессия новорожденного.<br> Как все организовать?</h3>
+                    <p class="article-text">Фотосессия новорожденного - все эти милые позы комочком, уютные корзинки, сладко спящие мосички, только представьте как нежно будут выглядеть спустя годы!...</p>
+                    <p class="article-text">Если вы хотите сохранить такой быстротечный, самый нежный период первых дней с рождения вашего ангелочка предоставьте это специалисту, ведь данный вид сьемки требует специальных профильных знаний и колоссальной подготовки. Доверится профессиональному фотографу для новорожденных это впервую очередь безопасность вашего малыша, уверенность в качестве фотографий и удовольствие от самого процесса.</p>
+                    <p class="article-text">Итак, как же правильно все организовать и заказать фотосессию новорожденного ?!</p>
+                    <a href="/article-newborn-session">Узнать больше</a>
+                </div>
+              </article>
+      
+              <article class="article-item" id="newbornarticle">
+                <div class="article-img">
+                    <img src="../img/newborn-price.jpg" alt="Фотография младенца" class="article-img">
+                </div>
+                <div class="article-description">
+                    <h3 class="article-subtitle">Цена фотосессии новорожденного.<br> Из чего она состоит?</h3>
+                    <p class="article-text">Какой бы дорогой не казалась сьемка новорожденного, но цена фотосессии напрямую зависит от профессионализма фотографа, качества реквизита, фототехники и других факторов!  А если смотреть глобально, за первый год будет потрачено не мало средств на ненужные игрушки и прочие вещи, а цена воспоминаний на этом фоне будет просто мизерной! Стоит ли говорить про эксклюзивность данного вида сьеки?</p>     
+                    <p class="article-text">Итак, давайте разберёмся из чего же состоит стоимость фотосессии новорожденных...</p>
+                    <a href="/article-session-price">Узнать больше</a>
+                  </div>
+              </article>
+
+          </div>
+
+        </section>
+
+      </main>
+      <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+
+    <script src="/js/library.js"></script>
+    <!-- <script src="/js/slider.js"></script> -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>

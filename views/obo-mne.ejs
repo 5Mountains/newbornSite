@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='/css/style.css'>
+  <title>
+    Информация о фотографе новорожденных - Алина Пятигор
+  </title>
+  <meta name="description" content="Фотограф для новорожденного ✔От 5 до 14 дней с рождения ♥ Больше 4х лет опыта и 200 счастливых семей ➔Переходите!">
+</head>
+
+<body>
+<!-- header start -->
+  <header>
+    <div class="container">
+          <div class="header-contacts">
+              <div class="header-phone">
+                <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+              </div>
+              <div class="header-viber">
+                <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+              </div>
+          </div>
+          <div class="header-nav">
+              <div class="logo">
+                  <a href="/">
+                    <img class="logoImg" src="../img/logo.png" alt="logo">
+                  </a>
+              </div>
+              <nav class="navigation">
+                  <button type="button" class="nav-btn">
+                    Меню
+                    <span class="burger-line"></span>
+                  </button>
+                  <ul class="menu">
+                      <li><a href="/">Главная</a></li>
+                      <li>
+                        <a class="menu-item">Галерея</a>
+                        <ul class="menu-sub">
+                          <% for (let i = 0; i < galleryNames.length; i++) { %>
+                          <li><a href="<%= galleryNamesEn[i] %>">
+                              <%= galleryNames[i] %></a></li>
+                          <% }; %> 
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="menu-item">Услуги</a>
+                        <ul class="menu-sub">
+                            <% for (let i = 0; i < prices.length; i++) { %>
+                              <li><a href="<%= pricesEn[i] %>">
+                                  <%= prices[i] %></a></li>
+                              <% }; %>  
+                        </ul>
+                      </li>
+                      <li><a href="o-semke">О съемке</a></li>
+                      <li><a href="otzyvy">Отзывы</a></li>
+                      <li><a href="obo-mne">Обо мне</a></li>
+                      <li><a href="kontakty">Контакты</a></li>
+                  </ul>
+              </nav>
+          </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <!-- main start -->
+  <main>
+    <!--  -->
+    <!-- about-main section start-->
+    <!--  -->
+    <section class="about-me-main">
+    <div class="container">
+        <h3 class="about-me-title">
+            Обо мне
+        </h3>
+        <div class="about-me-main-items">
+            <div class="about-me-main-item">
+              <div class="about-me-main-img">
+                <img src="../img/me.jpg" alt="Фотография новорожденного">
+              </div>
+              <div class="about-me-main-description">
+                <h3 class="about-me-main-subtitle">фотограф новорожденных<br>Алина Пятигор</h3>
+                <p class="about-me-main-text">Спасибо что посетили мою страничку! Давайте знакомится, меня зовут Алина, я фотограф новорожденных деток, живу и работаю в Киеве.</p>
+                <p class="about-me-main-text">Люблю фотографировать еще с детства, но нашла себя в этой профессии после просмотра зарубежных newborn фотографий, я безумно влюбилась в эти снимки и поняла, что вот оно, то чем я хочу и буду заниматься! Прошла серьезное профильное обучение, для того что бы максимально эффективно и безопасно сохранить для вас первые волшебные дни жизни вашего крохи.</p>
+                <p class="about-me-main-text">Создание нежных фотографий спящих ангелочков для меня не просто работа, а занятие, которое приносит неимоверное удовольствие, ведь я безумно люблю всех деток которых фотографирую!</p>
+                <p class="about-me-main-text">Загляните в раздел с отзывами, а так же присоединяйтесь ко мне соц. сетях, и мимимишное настроение вам будет обеспечено!:) Иконки со ссылками чуть ниже. Буду рада всех видеть!</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+  </main> 
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href=""><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href=""><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+
+  <script src="/js/library.js"></script>
+  <!-- <script src="/js/slider.js"></script> -->
+  <script src="/js/index.js"></script>
+</body>
+
+</html>
