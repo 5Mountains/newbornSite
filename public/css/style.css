@@ -322,7 +322,7 @@ table {
     display: block; } }
 
 .hero {
-  background: url(../img/hero.jpg) 50% 25% no-repeat;
+  background: url(../img/hero.webp) 50% 25% no-repeat;
   background-size: cover;
   background-color: #fff;
   height: calc(100vh - 24vh);
@@ -558,20 +558,21 @@ table {
     width: 100%;
     transition: all 1s ease; }
 
+.newborn-price-main-description {
+  transition: all 1s ease; }
+
 .newborn-price-main-subtitle {
   text-align: center;
   font-family: 'Century Gothic Bold', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
-  padding-top: 10px;
-  transition: all 1s ease; }
+  padding-top: 10px; }
 
 .newborn-price-main-text {
   text-align: justify;
   font-size: 16px;
   line-height: 1.5;
-  padding: 10px 0px;
-  transition: all 1s ease; }
+  padding: 10px 0px; }
   .newborn-price-main-text span {
     margin-left: 5px;
     font-family: 'Century Gothic Bold', sans-serif; }
