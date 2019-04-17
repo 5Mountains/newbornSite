@@ -69,7 +69,9 @@ const pagesList = [
   'prew-gallery',
   'fotoproduktsiia-stoimost',
   'obo-mne',
-  'otzyvy'
+  'otzyvy',
+  'novorozhdennye-2019',
+  'mladentsy-2018'
 ];
 
 // router for every pages
