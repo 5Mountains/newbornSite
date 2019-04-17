@@ -204,8 +204,8 @@
                 <p class="feedbacks-main-text">АЛИНОЧКА спасибо за прекрасную сьемку нашей зефирки! Это было превосходно!Ты настолько професионально подходиш что 5 часов твоей работы проходят за минуту, находиш контакт с ребенком и чувствуеш деток идеально))) Фото получились шикарные!</p>
               </div>
             </div>
-          </div>
         </div>
+        <button type="button" class="btn-about modal-btn">Оставить отзыв</button>
     </div>
     </section>
   </main> 
@@ -233,9 +233,32 @@
 
   </footer>
   <!-- footer end -->
+  <!-- modal start-->
+    <div class="modal">
+      <div class="modal-wrap">
+            <span class="modal-close-btn">&times;</span>
+            <h3 class="modal-title">Оставить отзыв</h3>
+            <div class="modal-item">
+                <form id="form" class="modal-form">
+                  <input type="hidden" value="feedback" id="type">
+                  <div class="modal-form-items">
+                    <div class="modal-form-item">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя">
+                        <input type="email" id="email" name="email" placeholder="Ваш e-mail">
+                    </div>
+                    <div class="modal-form-item">
+                        <textarea rows="10" cols="10" id="text" placeholder="Ваш отзыв"></textarea>
+                    </div>
+                  </div>
+                  <input type="submit" id="send-modal-from-btn" name="submit" value="Отправить">
+                </form>
+          </div>
+      </div>
+    </div>
+  <!-- modal end-->
 
   <script src="/js/library.js"></script>
-  <!-- <script src="/js/slider.js"></script> -->
+  <script src="/js/contacts.js"></script>
   <script src="/js/index.js"></script>
 </body>
 

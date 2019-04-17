@@ -8,13 +8,11 @@ let indexPrewPhotos = {}
 getPrewPhotos('novorozhdennye').then((result)=>{
   indexPrewPhotos.novorozhdennye = result,
   result.length = 10;
-  // console.log(result, 'getPrewPhotos result from backEnd')
 })
 
 getPrewPhotos('mladentsy').then((result)=>{
   indexPrewPhotos.mladentsy = result;
   result.length = 10; 
-  // console.log(result, 'getPrewPhotos result from backEnd')
 })
 
 // Preparing data from app.json
@@ -257,31 +255,41 @@ router.get('/article/:title', async function(req, res){
 /* POST contacts page. */
 router.post('/api/mail', function (req, res, next) {
   try {
+    let type, subject, phone;
+    if (req.body.type = 'feedback') {
+      type = 'Отзыв';
+      subject = 'Ваш отзыв принят, спасибо!';
+      phone = ''
+    } else {
+      type = 'Заявка';
+      subject = 'Ваша заявка принята, с Вами свяжуться в ближайшее время';
+      phone = `Контактный телефон: ${req.body.phone || 88888}<br>`
+    }
     mail.send(
-      'Алина <vladyslavpiatyhor@gmail.com> ', // from
-      'alina.piatyhor@gmail.com', // to
-      'Подтверждение почты | Mail Confirmation', // subject
+      '', // from
+      '', // to
+      type, // subject
       // html
       `<p>
-              Заявка:<br>
-              Имя:${req.body.name || 88888}<br>
-              Почтовый адрес:${req.body.email || 88888}<br>
-              Контактный телефон:${req.body.phone || 88888}<br>
-              Текст:${req.body.text || 88888}
+              ${type}: <br>
+              Имя: ${req.body.name || 88888}<br>
+              Почтовый адрес: ${req.body.email || 88888}<br>
+              ${phone}
+              Текст: ${req.body.text || 88888}
           </p>` +
       new Date(),
     )
     mail.send(
-      'Алина <vladyslavpiatyhor@gmail.com> ', // from
+      '', // from
       req.body.email, // to
-      'Ваша заявка принята, с Вами свяжуться в ближайшее время', // subject
+      subject, // subject
       // html
       `<p>
-              Заявка:<br>
-              Имя:${req.body.name || 88888}<br>
-              Почтовый адрес:${req.body.email || 88888}<br>
-              Контактный телефон:${req.body.phone || 88888}<br>
-              Текст :${req.body.text || 88888}
+              ${type}: <br>
+              Имя: ${req.body.name || 88888}<br>
+              Почтовый адрес: ${req.body.email || 88888}<br>
+              ${phone}
+              Текст: ${req.body.text || 88888}
           </p>` +
       new Date(),
     )
