@@ -4,7 +4,7 @@ const name = form.querySelector('#name');
 const email = form.querySelector('#email');
 const phone = form.querySelector('#phone') || {};
 const text = form.querySelector('#text');
-const type = form.querySelector('#type');
+const type = form.querySelector('#type') || {};
 
 form.addEventListener('submit', (event) => {
     alert('Письмо может попасть в спам.')
