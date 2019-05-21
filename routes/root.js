@@ -256,7 +256,7 @@ router.get('/article/:title', async function(req, res){
 router.post('/api/mail', function (req, res, next) {
   try {
     let type, subject, phone;
-    if (req.body.type = 'feedback') {
+    if (req.body.type == 'feedback') {
       type = 'Отзыв';
       subject = 'Ваш отзыв принят, спасибо!';
       phone = ''
@@ -265,9 +265,10 @@ router.post('/api/mail', function (req, res, next) {
       subject = 'Ваша заявка принята, с Вами свяжуться в ближайшее время';
       phone = `Контактный телефон: ${req.body.phone || 88888}<br>`
     }
+
     mail.send(
-      '', // from
-      '', // to
+      `Алина <${process.env.USERFROM}>`, // from
+      `${process.env.USERTO}`, // to
       type, // subject
       // html
       `<p>
@@ -280,7 +281,7 @@ router.post('/api/mail', function (req, res, next) {
       new Date(),
     )
     mail.send(
-      '', // from
+      `Алина <${process.env.USERFROM}>`, // from
       req.body.email, // to
       subject, // subject
       // html
@@ -300,15 +301,5 @@ router.post('/api/mail', function (req, res, next) {
     ok: true
   });
 });
-
-// router.post('/api/admin-login', function(req, res){
-//   console.log(req.body);
-
-//   res.json({
-//     ok: 'fuck you'
-//   });
-// })
-
-//
 
 module.exports = router;

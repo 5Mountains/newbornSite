@@ -6,8 +6,8 @@ let transporter = nodemailer.createTransport({
     port: 2525,
     // secure: true, // use SSL
     auth: {
-        user: 'fivemountains.dev@gmail.com',
-        pass: 'a1ae0748-fbd1-4e08-a1a4-b0c53863b70c'
+        user: '',
+        pass: ''
     },
     connectionTimeout: 1*60*1000
 })
@@ -29,8 +29,8 @@ function send(from, to, subject, html) {
 }
 
 send(
-    'Vitaliy <fivemountains.dev@gmail.com> ', // from
-    'pyatygorr@gmail.com', // to
+    'Vitaliy <> ', // from
+    '', // to
     'Підтвердження пошти | Mail Confirmation', // subject
     // html
     `<p>
