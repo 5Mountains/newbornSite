@@ -267,8 +267,8 @@ router.post('/api/mail', function (req, res, next) {
     }
 
     mail.send(
-      `Алина <${process.env.USERFROM}>`, // from
-      `${process.env.USERTO}`, // to
+      '', // from
+      '', // to
       type, // subject
       // html
       `<p>
@@ -281,7 +281,7 @@ router.post('/api/mail', function (req, res, next) {
       new Date(),
     )
     mail.send(
-      `Алина <${process.env.USERFROM}>`, // from
+      '', // from
       req.body.email, // to
       subject, // subject
       // html
