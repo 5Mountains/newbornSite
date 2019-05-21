@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 let transporter = nodemailer.createTransport({
     host: 'smtp.elasticemail.com',
