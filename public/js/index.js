@@ -1,5 +1,5 @@
 
-// hide and show the menu
+// start hide and show the menu
 const panelItem = document.querySelectorAll('.menu-item'),
     active = document.getElementsByClassName('open');
 
@@ -18,7 +18,9 @@ document.addEventListener('click', function(event) {
     panelItem.forEach((item)=>{
         if (!item.contains(event.target)) item.classList.remove('open');
     });
-  });
+});
+
+// end hide and show the menu
 
 // Start fixed menu
 
@@ -55,18 +57,16 @@ navBtn.addEventListener('click', ()=>{
 
     const btnModal = document.querySelectorAll('.modal-btn'),
         modal = document.querySelector('.modal'),
-        closeModal = document.querySelector('.modal-close-btn');
+        closeModal = document.querySelector('.modal-close-btn'),
+        closeModalBtn = document.getElementById('send-modal-from-btn');
 
     btnModal.forEach(function(btn){
             btn.addEventListener('click', ()=>{
-            console.log('btn on')
             modal.style.display = 'flex';
         })
     })
 
     closeModal.addEventListener('click', ()=>{
-        console.log('close btn')
-        const modal = document.querySelector('.modal');
         modal.style.display = 'none';
     })
 
@@ -74,5 +74,9 @@ navBtn.addEventListener('click', ()=>{
         if(e.target == modal) {
             modal.style.display = 'none';
         }
+    })
+
+    closeModalBtn.addEventListener('click', ()=>{
+        modal.style.display = 'none';
     })
 // end modal window
