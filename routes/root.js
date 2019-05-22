@@ -267,8 +267,8 @@ router.post('/api/mail', function (req, res, next) {
     }
 
     mail.send(
-      '', // from
-      '', // to
+      `Алина Пятигор ${process.env.USERFROM}`, // from
+      `${process.env.USERTO}`, // to
       type, // subject
       // html
       `<p>
@@ -278,10 +278,10 @@ router.post('/api/mail', function (req, res, next) {
               ${phone}
               Текст: ${req.body.text || 88888}
           </p>` +
-      new Date(),
+        `Время создания: ${new Date().toLocaleDateString("ru-RU")}`,
     )
     mail.send(
-      '', // from
+      `Алина Пятигор ${process.env.USERFROM}`, // from
       req.body.email, // to
       subject, // subject
       // html
@@ -292,7 +292,7 @@ router.post('/api/mail', function (req, res, next) {
               ${phone}
               Текст: ${req.body.text || 88888}
           </p>` +
-      new Date(),
+        `Время создания: ${new Date().toLocaleDateString("ru-RU")}`,
     )
   } catch (error) {
     console.log('Send error', error)
