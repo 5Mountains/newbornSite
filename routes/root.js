@@ -259,16 +259,16 @@ router.post('/api/mail', function (req, res, next) {
     if (req.body.type == 'feedback') {
       type = 'Отзыв';
       subject = 'Ваш отзыв принят, спасибо!';
-      phone = '';
+      phone = ''
     } else {
       type = 'Заявка';
       subject = 'Ваша заявка принята, с Вами свяжуться в ближайшее время';
-      phone = `Контактный телефон: ${req.body.phone || 88888}<br>`;
+      phone = `Контактный телефон: ${req.body.phone || 88888}<br>`
     }
 
     mail.send(
-      `Алина Пятигор ${process.env.USERFROM}`, // from
-      `${process.env.USERTO}`, // to
+      '', // from
+      '', // to
       type, // subject
       // html
       `<p>
@@ -278,10 +278,10 @@ router.post('/api/mail', function (req, res, next) {
               ${phone}
               Текст: ${req.body.text || 88888}
           </p>` +
-        `Время создания: ${new Date().toLocaleDateString("ru-RU")}`,
+      new Date(),
     )
     mail.send(
-      `Алина Пятигор ${process.env.USERFROM}`, // from
+      '', // from
       req.body.email, // to
       subject, // subject
       // html
@@ -292,7 +292,7 @@ router.post('/api/mail', function (req, res, next) {
               ${phone}
               Текст: ${req.body.text || 88888}
           </p>` +
-      `Время создания: ${new Date().toLocaleDateString("ru-RU")}`,
+      new Date(),
     )
   } catch (error) {
     console.log('Send error', error)

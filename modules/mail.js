@@ -1,20 +1,15 @@
-require('dotenv').config();
-
 const nodemailer = require('nodemailer');
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 let transporter = nodemailer.createTransport({
-    transport: "SMTP",
-    host: "smtp.gmail.com",
-    secureConnection: false,
-    port: 587,
-    requiresAuth: true,
+    host: 'smtp.elasticemail.com',
+    port: 2525,
     auth: {
-        user: `${process.env.USERFROM}`,
-        pass: `${process.env.PASS}`
+        user: '',
+        pass: ''
     },
     connectionTimeout: 1*60*1000
-});
+})
 
 
 module.exports = {
