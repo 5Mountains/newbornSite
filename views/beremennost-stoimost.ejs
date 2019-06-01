@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140721999-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-140721999-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+    <link rel='stylesheet' href='/css/style.css'>
+    <title>
+        Стоимость фотосессии Беременности в Киеве - фотографий Алина Пятигор
+    </title>
+    <meta name="description" content="Сколько стоит фотосессия Беременности ♥ Цена от 70 $ ➔ Узнайте подробнее!">
+  </head>
+  
+  <body>
+    <!-- header start -->
+      <header>
+        <div class="container">
+              <div class="header-contacts">
+                  <div class="header-phone">
+                    <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+                  </div>
+                  <div class="header-viber">
+                    <a title="Viber" href="viber://chat?number=+380955792417"><i class="fab fa-viber fa-lg"></i>Viber</a>
+                  </div>
+              </div>
+              <div class="header-nav">
+                  <div class="logo">
+                      <a href="/">
+                        <img class="logoImg" src="../img/logo.png" alt="logo">
+                      </a>
+                  </div>
+                  <nav class="navigation">
+                      <button type="button" class="nav-btn">
+                        Меню
+                        <span class="burger-line"></span>
+                      </button>
+                      <ul class="menu">
+                          <li><a href="/">Главная</a></li>
+                          <li>
+                            <a class="menu-item">Галерея</a>
+                            <ul class="menu-sub">
+                              <% for (let i = 0; i < galleryNames.length; i++) { %>
+                              <li><a href="<%= galleryNamesEn[i] %>">
+                                  <%= galleryNames[i] %></a></li>
+                              <% }; %> 
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="menu-item">Услуги</a>
+                            <ul class="menu-sub">
+                                <% for (let i = 0; i < prices.length; i++) { %>
+                                  <li><a href="<%= pricesEn[i] %>">
+                                      <%= prices[i] %></a></li>
+                                  <% }; %>  
+                            </ul>
+                          </li>
+                          <li><a href="o-semke">О съемке</a></li>
+                          <li><a href="otzyvy">Отзывы</a></li>
+                          <li><a href="obo-mne">Обо мне</a></li>
+                          <li><a href="kontakty">Контакты</a></li>
+                      </ul>
+                  </nav>
+              </div>
+        </div>
+      </header>
+    <!-- header end -->
+    
+      <!-- main start -->
+      <main>
+
+        <section class="baby-price">
+          <div class="container">
+
+              <h1 class="baby-price-title">
+                  Стоимость фотосьемки БЕРЕМЕННОСТИ
+              </h1>
+      
+                <div class="baby-price-items">
+                  <div class="baby-price-item" id="minimum">
+                    <div class="baby-price-img">
+                      <img src="../img/priceimg/pregnancy/pregnancy1.jpg" alt="Фотография Беременной девушки">
+                    </div>
+                    <div class="baby-price-description">
+                      <h3 class="baby-price-subtitle">Пакет "Минимум"</h3>
+                      <h4 class="baby-price-subtitle">70$</h4>
+                      <ul class="baby-price-text">
+                        <li>- 10 фото с детальной ретушью в авторской обработке;</li> 
+                        <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                        <li>- Дополнительно все удачные фото с базовой цветокоррекцией ~ 50шт.; </li>
+                        <li>- Сьемка на природе;</li>
+                        <li>- Сьемка длительностью 1-н час;</li>
+                        <li>- Не больше 1-го образа;</li>
+                        <li>- Не больше 2-х учасников сьемки;</li>
+                        <li>- Фото предоставляються ссылкой через файлообменник;</li>
+                        <li>- Сьемка, с учетом скидки на разрешение публикации - 70$, полная стоимость с учетом конфиденциальности 100$* дол.</li>
+                      </ul>
+                      <button type="button" class="btn-about modal-btn">Заказать</button>
+                    </div>
+                  </div>
+                  <div class="baby-price-item" id="standart">
+                      <div class="baby-price-img">
+                          <img src="../img/priceimg/pregnancy/pregnancy2.jpg" alt="Фотография Беременной женщины">
+                      </div>
+                      <div class="baby-price-description">
+                          <h3 class="baby-price-subtitle">Пакет "Стандарт"</h3>
+                          <h4 class="baby-price-subtitle">100$</h4>
+                          <ul class="baby-price-text">
+                            <li>- 20 фото с детальной ретушью в авторской обработке;</li> 
+                            <li>- Web копии фотографий с детальной ретушью для удобного размещения в интернете;</li>
+                            <li>- Дополнительно все удачные фото с базовой цветокоррекцией ~ 80-100шт.; </li>
+                            <li>- Сьемка на природе или в фотостудии;</li>
+                            <li>- Сьемка длительностью 2 часа;</li>
+                            <li>- 3 образа;</li>
+                            <li>- Количество учасников сьемки до 2-х взрослых и до 2-х детей.</li>
+                            <li>- Фото предоставляються ссылкой через файлообменник;</li>
+                            <li>- Сьемка, с учетом скидки на разрешение публикации - 100$, полная стоимость с учетом конфиденциальности 150$* дол.</li>
+                          </ul>
+                          <button type="button" class="btn-about modal-btn">Заказать</button>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="baby-price-add">
+                  <h3 class="baby-price-subtitle">Дополнительно к любому из пакетов Вы можете заказать:</h3>
+                  <p>● <a href="fotoproduktsiia-stoimost#photobook" title="Печать фотокниг">фотокнигу</a> стандарт или премиум класса и различных форматов</p>
+      
+                  <p>● дополнительную печать <a href="fotoproduktsiia-stoimost#photo" title="Печать фотографий">фотографий</a></p>
+                    
+                  <p>● <a href="fotoproduktsiia-stoimost#canvas" title="Печать холстов">фотокартину на холсте</a> различных форматов</p>
+                </div>
+              </section>
+          </div>
+        </section>
+
+      </main>
+      <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+
+    <div class="container">
+      <div class="footer-social-items">
+        <div class="footer-social-item">
+          <a title="Позвонить" href="tel:+380955792417"><i class="fas fa-phone-square fa-lg"></i>+380 95 579 24 17</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="instagram" href="https://www.instagram.com/alina.piatyhor/"><i class="fab fa-instagram fa-lg"></i>instagram</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="facebook" href="https://www.facebook.com/a.ivaschenko1"><i class="fab fa-facebook-square fa-lg"></i>facebook</a>
+        </div>
+        <div class="footer-social-item">
+          <a title="@mail" href="mailto:alina.piatyhor@gmail.com"><i class="far fa-envelope fa-lg"></i>alina.piatyhor@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer end -->
+  <!-- modal start-->
+    <div class="modal">
+      <div class="modal-wrap">
+            <span class="modal-close-btn">&times;</span>
+            <h3 class="modal-title">Оставить заявку</h3>
+            <div class="modal-item">
+                <form id="form" class="modal-form">
+                  <div class="modal-form-items">
+                    <div class="modal-form-item">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя">
+                        <input type="email" id="email" name="email" placeholder="Ваше e-mail">
+                        <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+                    </div>
+                    <div class="modal-form-item">
+                        <textarea rows="10" cols="10" id="text" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                  </div>
+                  <input type="submit" id="send-modal-from-btn" name="submit" value="Отправить">
+                </form>
+          </div>
+      </div>
+    </div>
+  <!-- modal end-->
+    <script src="/js/library.js"></script>
+    <script src="/js/contacts.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
