@@ -90,7 +90,8 @@ pagesList.map((name, i)=>{
 const routersList = [
   'novorozhdennye',
   'mladentsy',
-  'fotoproduktsiia'
+  'fotoproduktsiia',
+  'beremennost'
 ];
 
 // router for every albums
@@ -103,7 +104,7 @@ routersList.map((name, i)=>{
   router.get('/' + name, async function (req, res) {
     await getPrewGallery(req, res, name);
   });
-})
+});
 
 async function getPrewGallery(req, res, to){
   const prewPhotos = await getPrewPhotos(to);

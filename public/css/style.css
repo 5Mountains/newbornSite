@@ -1260,6 +1260,14 @@ table {
   border-top: 1px solid #000;
   border-right: 1px solid #000; }
 
+.pregnancy-attention {
+  border-left: 1px solid #000;
+  border-right: none; }
+
+.pregnancy-add {
+  border-left: none !important;
+  border-right: 1px solid #000; }
+
 .baby-price-add {
   border-top: 1px solid #000;
   border-left: 1px solid #000; }
