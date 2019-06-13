@@ -62,6 +62,7 @@ const pagesList = [
   'o-semke',
   'article-newborn-session',
   'article-session-price',
+  'article-not-waste-newborn-session-time',
   'article-store',
   'gallery',
   'prew-gallery',
