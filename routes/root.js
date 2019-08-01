@@ -136,7 +136,7 @@ function getPrewPhotos(to) {
       let destination = path.join(__dirname, `../public/img/photos/${to}`);
       // get folders - array of albums names 
       let folders = await readdir(destination);
-      // Находим файл JSON и убираем его.
+      // Find JSON file and remove it
       folders = removeInfo(folders);
       // build paths to each album
       folders.map(async (folder, i) => {
@@ -192,7 +192,7 @@ function response(res, to, prewPhotos, seo) {
 function readdir(path) {
   // if not mistake and everything is ok - resolve, else - reject
   return new Promise((resolve, reject) => {
-    // path - путь, направление для чтения директории
+    // path for direct reading
     fs.readdir(path, (err, names) => {
       if (err) reject(err)
       else resolve(names)
