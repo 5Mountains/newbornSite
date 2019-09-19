@@ -12,8 +12,7 @@ let transporter = nodemailer.createTransport({
     },
     connectionTimeout: 1*60*1000
 });
-
-
+    
 module.exports = {
     send: (from, to, subject, html)=>{
         console.log('send')
@@ -22,11 +21,11 @@ module.exports = {
             to,
             subject,
             html
-        }
+        };
     
         transporter.sendMail(mailOptions, (err, res) => {
-            if (err) console.log('Error: ', err)
-            else console.log('Email Sent: ', res)
-        })
+            if (err) console.log('Error: ', err);
+            else console.log('Email Sent: ', res);
+        });
     }
 };
