@@ -1,16 +1,13 @@
 require('dotenv').config();
 
 const nodemailer = require('nodemailer');
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 let transporter = nodemailer.createTransport({
-    transport: "SMTP",
-    host: "smtp.gmail.com",
-    secureConnection: false,
-    port: 587,
-    requiresAuth: true,
+    host: "in-v3.mailjet.com",
+    port: 25,
+    secure: false,
     auth: {
-        user: `${process.env.USERFROM}`,
+        user: `${process.env.USER}`,
         pass: `${process.env.PASS}`
     },
     connectionTimeout: 1*60*1000
