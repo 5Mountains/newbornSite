@@ -70,8 +70,7 @@ const pagesList = [
   'obo-mne',
   'otzyvy',
   'novorozhdennye-2019',
-  'mladentsy-2018',
-  'beremennost-stoimost'
+  'mladentsy-2018'
 ];
 
 // router for every pages
@@ -91,8 +90,7 @@ pagesList.map((name, i)=>{
 const routersList = [
   'novorozhdennye',
   'mladentsy',
-  'fotoproduktsiia',
-  'beremennost'
+  'fotoproduktsiia'
 ];
 
 // router for every albums
