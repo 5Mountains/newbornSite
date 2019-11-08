@@ -455,6 +455,8 @@ table {
     border-bottom: 2px solid #fff;
     border-top: 2px solid #fff;
     transition: .7s all; }
+  .more i {
+    margin-left: 10px; }
 
 @media (max-width: 991px) {
   .newborn-gallery-item {
@@ -1749,7 +1751,8 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  position: fixed; }
+  position: fixed;
+  transition: background-color 2s; }
 
 .modal-btn {
   cursor: pointer; }
@@ -1766,7 +1769,8 @@ textarea {
   color: #fff;
   z-index: 10;
   background: #fff;
-  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);
+  transition: 2s; }
 
 .modal-title {
   text-align: center;
