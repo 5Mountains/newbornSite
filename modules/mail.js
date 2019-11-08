@@ -3,9 +3,8 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 let transporter = nodemailer.createTransport({
-    host: "in-v3.mailjet.com",
-    port: 25,
-    secure: false,
+    host: `${process.env.HOST}`,
+    port: 2525,
     auth: {
         user: `${process.env.USER}`,
         pass: `${process.env.PASS}`

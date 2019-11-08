@@ -380,7 +380,8 @@ table {
 
 @media all and (max-width: 575.98px) {
   .hero-content h1 {
-    font-size: 18px; }
+    font-size: 18px;
+    margin-bottom: 40px; }
   .hero-content p {
     font-size: 13px;
     padding: 5px; }
