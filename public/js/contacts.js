@@ -6,8 +6,57 @@ const phone = form.querySelector('#phone') || {};
 const text = form.querySelector('#text');
 const type = form.querySelector('#type') || {};
 
+// validations
+let validName = (name) => /^([А-Яа-яA-Za-z- ]{2,500})$/.test(name);
+let validEmail = (email) => /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
+let validPhone = (phone) => /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone);
+let validText = (text) => /^([А-Яа-яA-Za-z-0-9]{2,500})$/.test(text);
+
+function validForm() {
+
+    let isValid = true;
+
+    if (validName(name.value)) {
+        name.classList.remove('invalid');
+        name.classList.add('valid');
+    } else {
+        isValid = false;
+        name.classList.remove('valid');
+        name.classList.add('invalid');
+    }
+
+    if (validEmail(email.value)) {
+        email.classList.remove('invalid');
+        email.classList.add('valid');
+    }
+    else {
+        isValid = false;
+        email.classList.remove('valid');
+        email.classList.add('invalid');
+    }
+    
+    if (validPhone(phone.value)) {
+        phone.classList.remove('invalid');
+        phone.classList.add('valid');
+    } else {
+        isValid = false;
+        phone.classList.add('invalid');
+        phone.classList.add('invalid');
+    }
+
+    if (validText(text.value)) {
+        text.classList.remove('invalid');
+        text.classList.add('valid');
+    } else {
+        isValid = false;
+        text.classList.add('invalid');
+        text.classList.add('invalid');
+    }
+
+    return isValid;
+}
+
 form.addEventListener('submit', (event) => {
-    alert('Письмо может попасть в спам.')
     event.preventDefault();
     let data = {
         type: type.value,
@@ -16,13 +65,19 @@ form.addEventListener('submit', (event) => {
         phone: phone.value,
         text: text.value
     };
-    log(data);
-    send(data).then((res)=>{
-        log(res);
-        if (res.ok) clean();
-    })
+
+    if (validForm()) {
+        send(data).then((res)=>{
+            log(res);
+            if (res.ok) clean();
+        });    
+        alert('Письмо может попасть Вам в спам.');
+    } else {
+        alert('Упс, колонки красного цвета заполнены не корректно!');
+    }
+   
     
-})
+});
 
 async function send(data) {
     const rawResponse = await fetch('/api/mail', {
@@ -35,12 +90,12 @@ async function send(data) {
     });
     const content = await rawResponse.json();
 
-    return  content
+    return content;
 }
 
 function clean() {
     name.value = '',
         email.value = '',
         phone.value = '',
-        text.value = ''
+        text.value = '';
 }

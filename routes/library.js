@@ -6,11 +6,11 @@ readFile = (path) => {
     return new Promise((resolve, reject) => {
       // path - путь, направление для чтения директории
       fs.readFile(path, 'utf-8', (err, names) => {
-        if (err) reject(err)
-        else resolve(names)
+        if (err) reject(err);
+        else resolve(names);
       });
     });
-  }
+  };
 
 //  ruString = change name in init func
 convertorRu2En = (ruString, prefix='') =>{
@@ -20,6 +20,6 @@ convertorRu2En = (ruString, prefix='') =>{
   let enString = ruStringLow;
   ruMatrix.map((letter, i)=>{
     enString = enString.replace(new RegExp(ruMatrix[i], "g"),enMatrix[i]);
-  })
-  return enString + prefix
-}
+  });
+  return enString + prefix;
+};

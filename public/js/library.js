@@ -11,5 +11,5 @@ async function send(url, data) {
 
     console.log(content, '- content from library')
 
-    return  content
+    return  content;
 }

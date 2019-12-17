@@ -1751,8 +1751,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  position: fixed;
-  transition: background-color 2s; }
+  position: fixed; }
 
 .modal-btn {
   cursor: pointer; }
@@ -1769,8 +1768,7 @@ textarea {
   color: #fff;
   z-index: 10;
   background: #fff;
-  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4);
-  transition: 2s; }
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.4); }
 
 .modal-title {
   text-align: center;
@@ -1845,5 +1843,13 @@ li {
   list-style: none; }
 
 /*! END main style */
+/*! START validation style */
+.valid {
+  border: 1px solid green !important; }
+
+.invalid {
+  border: 1px solid red !important; }
+
+/*! END validation style */
 
 /*# sourceMappingURL=style.css.map */

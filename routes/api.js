@@ -17,7 +17,7 @@ router.post('/admin-login', function(req, res){
             message: 'name or password is not correct'
           });
         }
-  })
+  });
 
 
 function readFile(path) {
@@ -25,8 +25,8 @@ function readFile(path) {
     return new Promise((resolve, reject) => {
       // path - путь, направление для чтения директории
       fs.readFile(path, 'utf-8', (err, names) => {
-        if (err) reject(err)
-        else resolve(names)
+        if (err) reject(err);
+        else resolve(names);
       });
     });
   }
@@ -36,8 +36,8 @@ function writeFile(path, text) {
     return new Promise((resolve, reject) => {
       // path - путь, направление для чтения директории
       fs.writeFile(path, text, (err, names) => {
-        if (err) reject(err)
-        else resolve(names)
+        if (err) reject(err);
+        else resolve(names);
       });
     });
   }
@@ -50,7 +50,7 @@ router.post('/add-gallery', async function(req, res){
   appObj.galleryNames.push(newName);
   const appJsonNew = JSON.stringify(appObj);
   let finish = await writeFile('./app/app.json', appJsonNew);
-  console.log(finish)
+  console.log(finish);
 });
 
 module.exports = router;
