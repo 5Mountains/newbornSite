@@ -4,7 +4,7 @@ var path = require('path');
 const mail = require('../modules/mail.js');
 const fs = require('fs');
 
-let indexPrewPhotos = {}
+let indexPrewPhotos = {};
 getPrewPhotos('novorozhdennye').then((result)=>{
   indexPrewPhotos.novorozhdennye = result,
   result.length = 10;
@@ -32,7 +32,7 @@ async function init (){
     prices = appObj.prices;
     pricesEn = prices.map((name)=>{
       return convertorRu2En(name, '-stoimost');
-    })
+    });
   } catch (error) {
     console.log(error, ' - error from init func')
   }
@@ -68,9 +68,7 @@ const pagesList = [
   'prew-gallery',
   'fotoproduktsiia-stoimost',
   'obo-mne',
-  'otzyvy',
-  'novorozhdennye-2019',
-  'mladentsy-2018'
+  'otzyvy'
 ];
 
 // router for every pages
@@ -122,7 +120,7 @@ function getSeoDescriptions(to) {
     } catch (error) {
       console.log(error, 'error - getSeoDescriptions')
     }
-  })
+  });
 }
 
 function getPrewPhotos(to) {
@@ -148,25 +146,25 @@ function getPrewPhotos(to) {
         } else {
           data = {
             title: 'Скоро будет'
-          }
+          };
         }
         prewPhotos.push({
           href: `./${to}/${folder}`,
           url: `./img/photos/${to}/${folder}/${files[0]}`,
           name: data.title,
           data: data
-        })
+        });
         counter++;
         if (counter == folders.length) {
           newDate = prewPhotos.sort((a, b) => {
             return Number(b.data.date) - Number(a.data.date)
-          }) 
-          resolve(newDate)
+          });
+          resolve(newDate);
         } 
         else console.log('...asembling', i)
       });
     } catch (error) {
-      console.log(error, 'error - getPrewPhotos')
+      console.log(error, 'error - getPrewPhotos');
     }
   })
 }
@@ -192,8 +190,8 @@ function readdir(path) {
   return new Promise((resolve, reject) => {
     // path for direct reading
     fs.readdir(path, (err, names) => {
-      if (err) reject(err)
-      else resolve(names)
+      if (err) reject(err);
+      else resolve(names);
     });
   });
 }
@@ -225,8 +223,8 @@ async function albumChoice(req, res, albumCategory) {
     files = files.sort((a, b) => {
       let _a = Number(a.split('.')[0]);
       let _b = Number(b.split('.')[0]);
-      return _a - _b
-    })
+      return _a - _b;
+    });
     
     res.render('gallery', {
       category: albumCategory,
@@ -280,7 +278,7 @@ router.post('/api/mail', function (req, res, next) {
               Текст: ${req.body.text || 88888}
           </p>` +
         `Время создания: ${new Date().toLocaleDateString("ru-RU")}`,
-    )
+    );
     mail.send(
       `Алина Пятигор ${process.env.USERFROM}`, // from
       req.body.email, // to
@@ -294,9 +292,9 @@ router.post('/api/mail', function (req, res, next) {
               Текст: ${req.body.text || 88888}
           </p>` +
         `Время создания: ${new Date().toLocaleDateString("ru-RU")}`,
-    )
+    );
   } catch (error) {
-    console.log('Send error', error)
+    console.log('Send error', error);
   }
   res.json({
     ok: true

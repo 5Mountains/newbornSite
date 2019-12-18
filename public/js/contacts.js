@@ -40,7 +40,7 @@ function validForm() {
         phone.classList.add('valid');
     } else {
         isValid = false;
-        phone.classList.add('invalid');
+        phone.classList.remove('valid');
         phone.classList.add('invalid');
     }
 
@@ -49,7 +49,7 @@ function validForm() {
         text.classList.add('valid');
     } else {
         isValid = false;
-        text.classList.add('invalid');
+        text.classList.remove('valid');
         text.classList.add('invalid');
     }
 
