@@ -1823,6 +1823,91 @@ textarea {
     font-size: 18px;
     margin: 15px 0; } }
 
+.adaptivn-slayder {
+  max-width: 60%;
+  position: relative;
+  margin: 15px auto; }
+  .adaptivn-slayder img {
+    object-fit: cover;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important; }
+
+.adaptivn-slayder .prev,
+.adaptivn-slayder .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; }
+
+.adaptivn-slayder .next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+.adaptivn-slayder .prev:hover,
+.adaptivn-slayder .next:hover {
+  background-color: rgba(25, 24, 24, 0.8); }
+
+.beksun-slayda {
+  position: absolute;
+  color: #f4f4f7;
+  font-size: 35px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 1px #141415, 0 0 1em #141415; }
+
+.uneizmen-akemada {
+  text-align: center; }
+
+.noguma-pomoki-kadra {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+.deystvuyus,
+.noguma-pomoki-kadra:hover {
+  background-color: #aaa; }
+
+.adaptivn-slayder .parag {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+.attention {
+  color: red;
+  font-weight: 900; }
+
+@media all and (max-width: 575.98px) {
+  .adaptivn-slayder {
+    max-width: 80%; } }
+
 /*! START main style */
 body {
   font-family: 'Century Gothic Regular', sans-serif;

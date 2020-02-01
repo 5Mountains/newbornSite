@@ -57,62 +57,6 @@ function validForm() {
     return isValid;
 }
 
-function validFeedback() {
-
-    let isValid = true;
-
-    if (validName(name.value)) {
-        name.classList.remove('invalid');
-        name.classList.add('valid');
-    } else {
-        isValid = false;
-        name.classList.remove('valid');
-        name.classList.add('invalid');
-    }
-
-    if (validEmail(email.value)) {
-        email.classList.remove('invalid');
-        email.classList.add('valid');
-    }
-    else {
-        isValid = false;
-        email.classList.remove('valid');
-        email.classList.add('invalid');
-    }
-
-    if (validText(text.value)) {
-        text.classList.remove('invalid');
-        text.classList.add('valid');
-    } else {
-        isValid = false;
-        text.classList.remove('valid');
-        text.classList.add('invalid');
-    }
-
-    return isValid;
-}
-
-feedback.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let data = {
-        type: type.value,
-        name: name.value,
-        email: email.value,
-        text: text.value
-    };
-
-    if (validFeedback()) {
-        send(data).then((res)=>{
-            log(res);
-            if (res.ok) clean();
-        });    
-        alert('Письмо может попасть Вам в спам.');
-    } else {
-        alert('Упс, колонки красного цвета заполнены не корректно!');
-    }
-   
-});
-
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     let data = {
