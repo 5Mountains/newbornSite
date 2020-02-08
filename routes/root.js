@@ -68,8 +68,7 @@ const pagesList = [
   'prew-gallery',
   'fotoproduktsiia-stoimost',
   'obo-mne',
-  'otzyvy',
-  'aktsii'
+  'otzyvy'
 ];
 
 // router for every pages
