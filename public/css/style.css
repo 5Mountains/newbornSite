@@ -1058,6 +1058,212 @@ table {
   .newborn-price-add p:last-child {
     text-align: justify; } }
 
+.baby-price-title {
+  text-align: center;
+  margin: 30px auto;
+  width: 100%;
+  text-transform: uppercase;
+  color: #6CC4D8;
+  border-bottom: 2px solid #6CC4D8;
+  border-top: 2px solid #6CC4D8;
+  font-size: 24px;
+  font-family: 'Century Gothic Bold', sans-serif;
+  padding: 10px 0; }
+
+.baby-price-items {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.baby-price-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 20px; }
+  .baby-price-item:nth-child(2) {
+    border-left: none;
+    border-right: 1px solid #000; }
+
+.baby-price-img {
+  width: 45%; }
+  .baby-price-img img {
+    display: block;
+    width: 100%; }
+
+.baby-price-description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  padding-top: 20px; }
+  .baby-price-description button {
+    width: 50%;
+    min-height: 40px;
+    cursor: pointer;
+    background-color: #6CC4D8;
+    color: #fff;
+    font-family: 'Century Gothic Bold', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    transition: .5s all;
+    margin: 10px 0px; }
+    .baby-price-description button:focus {
+      outline: none; }
+    .baby-price-description button:hover {
+      border: 2px solid #6CC4D8;
+      background: #fff;
+      color: #6CC4D8; }
+  .baby-price-description h4 {
+    padding-top: 5px; }
+
+.baby-price-subtitle {
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px 0; }
+
+.baby-price-text {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 10px 0px; }
+  .baby-price-text li {
+    padding-bottom: 10px; }
+
+.baby-price-about,
+.baby-price-6-12-attention,
+.baby-price-6-12-add {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px; }
+  .baby-price-about p,
+  .baby-price-6-12-attention p,
+  .baby-price-6-12-add p {
+    padding: 10px 0;
+    text-align: left;
+    line-height: 1.5;
+    text-align: justify; }
+
+.baby-price-about {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000; }
+
+.baby-price-6-12-attention {
+  border-top: 1px solid #000;
+  border-left: 1px solid #000; }
+
+.baby-price-6-12-add {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000; }
+  .baby-price-6-12-add p a {
+    transition: .5s all;
+    border-bottom: 1px solid #fff; }
+    .baby-price-6-12-add p a:hover {
+      border-bottom: 1px solid #6CC4D8; }
+
+.folder-direction-item {
+  color: #000; }
+
+@media (max-width: 991px) {
+  .baby-price-title {
+    font-size: 26px; }
+  .baby-price-subtitle {
+    font-size: 18px; }
+  .baby-price-text {
+    font-size: 14px; }
+  .baby-price-about p,
+  .baby-price-6-12-attention p,
+  .baby-price-6-12-add p {
+    font-size: 14px; } }
+
+@media (max-width: 768px) {
+  .baby-price-title {
+    font-size: 20px;
+    margin: 20px 10px; }
+  .baby-price-subtitle {
+    font-size: 16px; }
+  .baby-price-item {
+    padding: 10px 20px;
+    flex-direction: column; }
+  .baby-price-subtitle {
+    padding: 10px 0; }
+  .baby-price-description,
+  .baby-price-img {
+    width: 95%;
+    padding-bottom: 10px; }
+  .baby-price-text {
+    padding: 5px 0;
+    font-size: 13px; }
+  .baby-price-description button {
+    margin: 10px 0 0 0;
+    width: 60%; } }
+
+.education-img {
+  display: flex; }
+  .education-img img {
+    display: block;
+    width: 100%; }
+
+.education p {
+  font-family: 'Century Gothic Regular', sans-serif;
+  font-size: 18px;
+  margin: 30px 10px;
+  line-height: 1.5;
+  text-indent: 30px;
+  text-align: justify; }
+
+.education a {
+  transition: .5s all;
+  border-bottom: 1px solid #fff; }
+  .education a:hover {
+    border-bottom: 1px solid #6CC4D8; }
+
+.education h3 {
+  text-align: center;
+  font-family: 'Century Gothic Bold', sans-serif;
+  font-size: 20px;
+  padding-top: 30px;
+  margin: 50px; }
+
+.education-points {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 10px 0px 40px 0; }
+  .education-points li {
+    padding-bottom: 10px; }
+
+@media (max-width: 991px) {
+  .education h3 {
+    padding: 0;
+    margin: 30px 0 20px 0;
+    font-size: 18px; }
+  .education p {
+    font-size: 14px;
+    padding-bottom: 5px; }
+  .education-points {
+    font-size: 14px; } }
+
+@media (max-width: 768px) {
+  .education h3 {
+    font-size: 16px; }
+  .education p {
+    font-size: 14px;
+    padding-bottom: 20px; }
+  .education-points {
+    padding: 5px 0 20px 0; } }
+
 .photo-production-price-title-main {
   text-align: center;
   margin: 30px auto;
@@ -1258,6 +1464,18 @@ table {
   padding: 10px 0px; }
   .baby-price-text li {
     padding-bottom: 10px; }
+
+.baby-price-about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px; }
+  .baby-price-about p {
+    padding: 10px 0;
+    text-align: left;
+    line-height: 1.5;
+    text-align: justify; }
 
 .baby-price-attention,
 .baby-price-add {

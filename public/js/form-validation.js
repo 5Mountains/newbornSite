@@ -11,7 +11,6 @@ const type = form.querySelector('#type') || {};
 let validName = (name) => /^([А-Яа-яA-Za-z- ]{2,500})$/.test(name);
 let validEmail = (email) => /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
 let validPhone = (phone) => /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone);
-let validText = (text) => /^([А-Яа-яA-Za-z-0-9]{2,500})$/.test(text);
 
 function validForm() {
 
@@ -43,15 +42,6 @@ function validForm() {
         isValid = false;
         phone.classList.remove('valid');
         phone.classList.add('invalid');
-    }
-
-    if (validText(text.value)) {
-        text.classList.remove('invalid');
-        text.classList.add('valid');
-    } else {
-        isValid = false;
-        text.classList.remove('valid');
-        text.classList.add('invalid');
     }
 
     return isValid;
