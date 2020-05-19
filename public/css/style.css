@@ -1209,7 +1209,6 @@ table {
     width: 60%; } }
 
 .education-img {
-  display: flex;
   width: 95%;
   margin: 0 auto; }
   .education-img img {
@@ -1218,7 +1217,7 @@ table {
 
 .education p {
   font-family: 'Century Gothic Regular', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin: 30px 10px;
   line-height: 1.5;
   text-indent: 30px;
