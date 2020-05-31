@@ -87,7 +87,7 @@ table {
 .header-contacts {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   min-height: 50px; }
 
@@ -278,7 +278,8 @@ table {
 
 @media (max-width: 768px) {
   .header-contacts {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   .header-phone {
     margin: 15px 0; }
   .logo {
