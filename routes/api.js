@@ -19,7 +19,6 @@ router.post('/admin-login', function(req, res){
         }
   });
 
-
 function readFile(path) {
     // if not mistake and everything is ok - resolve, else - reject
     return new Promise((resolve, reject) => {
@@ -41,7 +40,6 @@ function writeFile(path, text) {
       });
     });
   }
-
 
 router.post('/add-gallery', async function(req, res){
   const newName = req.body.galleryName;

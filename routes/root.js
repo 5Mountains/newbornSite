@@ -3,26 +3,30 @@ var router = express.Router();
 var path = require('path');
 const mail = require('../modules/mail.js');
 const fs = require('fs');
+const fsp = require('fs').promises;
 
 let indexPrewPhotos = {};
 getPrewPhotos('novorozhdennye').then((result)=>{
   indexPrewPhotos.novorozhdennye = result,
   result.length = 10;
-})
+});
 
 getPrewPhotos('mladentsy').then((result)=>{
   indexPrewPhotos.mladentsy = result;
   result.length = 10; 
-})
+});
 
 // Preparing data from app.json
 let galleryNamesEn;
 let galleryNames;
 let prices;
 let pricesEn;
+let feedbackPhotos;
+
 
 async function init (){
   try { 
+    feedbackPhotos = await readInfo('../public/img/photos/feedback/info.json');
     const appJson = await readFile('./app/app.json');
     const appObj = JSON.parse(appJson);
     galleryNames = appObj.galleryNames;
@@ -73,6 +77,17 @@ const pagesList = [
   'otzyvy'
 ];
 
+async function readInfo (url) {
+  try {
+    let destination = path.join(__dirname, url);
+    const result = await fsp.readFile(destination, 'utf-8');
+    return JSON.parse(result);
+  } catch (error) {
+    return null;
+  }
+} 
+
+
 // router for every pages
 pagesList.map((name, i)=>{
   router.get('/' + name, async function (req, res, next) {
@@ -81,7 +96,8 @@ pagesList.map((name, i)=>{
       galleryNames,
       galleryNamesEn,
       prices,
-      pricesEn
+      pricesEn,
+      feedbackPhotos
     });
   });
 });
@@ -251,7 +267,6 @@ router.get('/article/:title', async function(req, res){
     articleObj
   });
 })
-
 
 /* POST contacts page. */
 router.post('/api/mail', function (req, res, next) {
