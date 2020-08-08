@@ -23,7 +23,7 @@ let prices;
 let pricesEn;
 let feedbackPhotos;
 
-
+// Way of displaying feedbacks section
 async function init (){
   try { 
     feedbackPhotos = await readInfo('../public/img/photos/feedback/info.json');
