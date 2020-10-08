@@ -189,7 +189,6 @@ table {
   z-index: 2;
   background-color: #6CC4D8; }
   .menu li {
-    magin: 0 20px;
     min-height: 40px;
     display: block;
     text-align: center;
