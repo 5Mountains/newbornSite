@@ -1,6 +1,6 @@
-###Website about professional photographer of newborns and babies in Kyiv, Ukraine.
+### Website about professional photographer of newborns and babies in Kyiv, Ukraine.
 <br>
-####In order to create this site, I used the following technologies:
+#### In order to create this site, I used the following technologies:
 
 - markup - HTML, SASS and EJS; 
 - logic - vanila JavaScript; 
